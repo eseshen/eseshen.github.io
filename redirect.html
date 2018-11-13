@@ -5,7 +5,9 @@
 	<body> 
 		<script>
 			var url = window.location.href;
-			var query = url.split('?')[1];
+			var urlArr = url.split('?');
+			if (urlArr.length<2) window.location.href = "https://www.google.com/search?q=";
+			var query = urlArr[1];
 			var arr = query.split('&');
 			var prefix = "https://www.google.com/search?q=";
 			var suffix = "";
