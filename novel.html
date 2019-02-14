@@ -49,11 +49,12 @@ var replacement = function(str){
 				
 			$('#generate').on('click', function(e){
 				var file = $('#novel')[0].files[0];
-				var filename = file.name;
 				if (!file){
 					alert('请选择一个文件');
 					return;
 				}
+				
+				var filename = file.name;
 				if (window.FileReader) {
 					var reader = new FileReader();
 					reader.onloadend = function (evt) {
