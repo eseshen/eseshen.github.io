@@ -1,11 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
 	</head>
-	<body> 
+	<body> 		
+		<div>
+			<label for='novel'>请选择一个TXT文件: </label>
+			<input id='novel' type='file'>
+		</div>
+		
+		<div>
+			<label for='regex'>请输入要查找替换的正则表达式: </label>
+			<input id='regex' type='text'>
+		</div>
+		
+		<div>
+			<label for='code'>请输入要生成章节名的代码: </label>
+			<br>
+			<textarea id='code' rows="10" style="resize:none;width:400px;overflow-x:visible;overflow-y:visible;">
+var replacement = function(str){
+	// Please input your code here
+	console.log(str);
+	return str;
+}
+			</textarea>
+		</div>
+		
+		<div>
+			<button id='generate' type='button'>生成</button>
+		</div>
+		
 		<script>
-      alert('hello world');
+			var content;
+		
+			String.prototype.replaceAll = function(search, replacement) {
+				var target = this;
+				return target.replace(new RegExp(search, 'g'), replacement);
+			};
+			
+			function createAndDownloadFile(fileName, content) {
+				var aTag = document.createElement('a');
+				var blob = new Blob([content]);
+				aTag.download = fileName;
+				aTag.href = URL.createObjectURL(blob);
+				aTag.click();
+				URL.revokeObjectURL(blob);
+			}
+				
+			$('#generate').on('click', function(e){
+				var file = $('#novel')[0].files[0];
+				var filename = file.name;
+				if (!file){
+					alert('请选择一个文件');
+					return;
+				}
+                if (window.FileReader) {
+                    var reader = new FileReader();
+                    reader.onloadend = function (evt) {
+                        if (evt.target.readyState == FileReader.DONE) {
+                            content = evt.target.result;
+							//console.log(content);
+							var regex = eval('/'+$('#regex').val()+'/');
+							
+							var code = $('#code').val();
+							eval(code);
+							
+							var result = content.replaceAll(regex, replacement);
+							var newname = filename.split('.')[0]+"(已处理).txt";
+							createAndDownloadFile(newname, result);
+							
+                        }
+                    };
+
+                    reader.readAsText(file, 'GBK');
+                }
+			});
 		</script>
 	</body>
 </html>
