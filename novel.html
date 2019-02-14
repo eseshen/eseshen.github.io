@@ -54,11 +54,11 @@ var replacement = function(str){
 					alert('请选择一个文件');
 					return;
 				}
-                if (window.FileReader) {
-                    var reader = new FileReader();
-                    reader.onloadend = function (evt) {
-                        if (evt.target.readyState == FileReader.DONE) {
-                            content = evt.target.result;
+				if (window.FileReader) {
+					var reader = new FileReader();
+					reader.onloadend = function (evt) {
+						if (evt.target.readyState == FileReader.DONE) {
+							content = evt.target.result;
 							//console.log(content);
 							var regex = eval('/'+$('#regex').val()+'/');
 							
@@ -69,11 +69,11 @@ var replacement = function(str){
 							var newname = filename.split('.')[0]+"(已处理).txt";
 							createAndDownloadFile(newname, result);
 							
-                        }
-                    };
+						}
+					};
 
-                    reader.readAsText(file, 'GBK');
-                }
+					reader.readAsText(file, 'GBK');
+				}
 			});
 		</script>
 	</body>
