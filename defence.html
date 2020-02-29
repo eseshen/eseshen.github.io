@@ -7,9 +7,11 @@
       function showResult() {
         var result = 0;
         var text = "";
-        $("input:checkbox:checked").each(function(item) {
-          result += item.value;
-        });
+        var checked = $("input:checkbox:checked");
+        for (var i = 0; i < checked.length; i++) {
+          result += parseInt(checked[i].value);
+        }
+
         if (result <= 2) {
           text = "零防";
         } else if (result <= 15) {
