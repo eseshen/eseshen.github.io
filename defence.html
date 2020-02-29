@@ -4,22 +4,22 @@
     <title>测试你的防御</title>
     <link
       rel="stylesheet"
-      href="https://eseshen.github.io/css/bootstrap/bootstrap.min.css"
+      href="css/bootstrap/bootstrap.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://eseshen.github.io/css/bootstrap/bootstrap-responsive.min.css"
+      href="css/bootstrap/bootstrap-responsive.min.css"
     />
     <link
       rel="stylesheet"
-      href="https://eseshen.github.io/css/uikit/uikit.min.css"
+      href="css/uikit/uikit.min.css"
     />
 
-    <script src="https://eseshen.github.io/js/jquery.min.js"></script>
-    <script src="https://eseshen.github.io/js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
 
-    <script src="https://eseshen.github.io/js/uikit/uikit-icons.min.js"></script>
-    <script src="https://eseshen.github.io/js/uikit/uikit.min.js"></script>
+    <script src="js/uikit/uikit-icons.min.js"></script>
+    <script src="js/uikit/uikit.min.js"></script>
 
     <style>
       input.uk-checkbox {
@@ -27,6 +27,10 @@
 		height:20px;
 		margin:2px;
       }
+	  
+	  .text-detail {
+		padding-left:2em;
+	  }
     </style>
 
     <script>
@@ -70,25 +74,44 @@
               </h3>
 
               <form>
-                <label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>非初</label><small>非初：指女主的初牵/初抱/初吻/...给了男主以外其他人。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>惧女</label><small>惧女：指女主过于强势，而主角软弱不堪地接受女主的命令和指挥，逆来顺受。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>神雕</label><small>神雕：指文中出现有比女主们还要优秀还要漂亮的女性角色，但该女性角色却是属于别人的，已经名花有主。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>兄弟情结</label><small>兄弟情结：指主角将与兄弟/部下的感情看的比什么都重，各种好处都要分给兄弟，甚至为了兄弟损害自己正当利益。<br>*主角虽然重视与兄弟感情，但是明白利益的纠纷的情况在此处不计入内。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>分身流（无意识）</label><small>分身流（无意识）：指主角利用武学/秘籍/系统/宝物等创造无独立意识的分身。仅限于分身完全是由主角操控的第二个身体的情形。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>非处</label><small>非处：指女主非处女。简写做FC。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>人妻</label><small>人妻：指女主已嫁为人妇。简写做RQ。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>漏女</label><small>漏女：指女主跟男主有明显感情交集，且描写和戏份较多，但直到结局男主都没有把女主收入后宫。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>拒女</label><small>拒女：指男主因为各种原因/理由/借口，而无视或者拒绝女主的爱意或者表白。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>面具流</label><small>面具流：指主角利用面具或换脸等方式，使用另外一个身份，并导致女主对这个虚假的身份产生好感。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>亵女（轻度）</label><small>亵女：指女主被主角之外的异性占便宜，但又没收到实质性伤害。在本问卷中轻度亵女包括被人用言语骚扰，被人摸手，被隔着衣服摸重点部位等程度较轻的情形。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="30"/>送女</label><small>送女：指主角把女主/准女主/明显有感情交集的角色送给配角/反派的行为。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="30"/>破鞋</label><small>破鞋：指女主角被其他男性玩弄后又被抛弃。简称PX。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="30"/>分身流（有意识）</label><small>分身流（有意识）：指主角利用武学/秘籍/系统/宝物等创造有独立意识的分身。即分身明白自己想做什么，虽然可能服从主角命令，但主角无法完全操纵。<br>*分身是可以收入后宫的异性的情形排除在外。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="30"/>亵女（重度）</label><small>亵女：指女主被主角之外的异性占便宜，但又没收到实质性伤害。在本问卷中重度亵女包括爆衣，被人看光，被直接接触重点部位，甚至只差最后一步等程度较重的情形。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="50"/>万人骑</label><small>万人骑：指女主与不计其数的男性都发生了关系。简称WRQ。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="100"/>背叛</label><small>背叛：指女主背叛了主角的行为。包括迫不得已，为了家族活着门派的利益而出卖男主的行为。也包括在喜欢主角之后又喜欢上其他的男性。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="100"/>死女</label><small>死女：指女主/准女主/明显有感情交集的角色因为各种各样的原因死亡，且无法复活。</small>
-				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="100"/>绿帽</label><small>绿帽：指女主在喜欢上主角以后，又和其他男性发生关系（包括被强迫和自愿）。</small>
+                <label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>非初</label>
+				<div class="text-detail"><small>非初：指女主的初牵/初抱/初吻/...给了男主以外其他人。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>惧女</label>
+				<div class="text-detail"><small>惧女：指女主过于强势，而主角软弱不堪地接受女主的命令和指挥，逆来顺受。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>神雕</label>
+				<div class="text-detail"><small>神雕：指文中出现有比女主们还要优秀还要漂亮的女性角色，但该女性角色却是属于别人的，已经名花有主。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>兄弟情结</label>
+				<div class="text-detail"><small>兄弟情结：指主角将与兄弟/部下的感情看的比什么都重，各种好处都要分给兄弟，甚至为了兄弟损害自己正当利益。<br>*主角虽然重视与兄弟感情，但是明白利益的纠纷的情况在此处不计入内。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="1"/>分身流（无意识）</label>
+				<div class="text-detail"><small>分身流（无意识）：指主角利用武学/秘籍/系统/宝物等创造无独立意识的分身。仅限于分身完全是由主角操控的第二个身体的情形。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>非处</label>
+				<div class="text-detail"><small>非处：指女主非处女。简写做FC。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>人妻</label>
+				<div class="text-detail"><small>人妻：指女主已嫁为人妇。简写做RQ。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>漏女</label>
+				<div class="text-detail"><small>漏女：指女主跟男主有明显感情交集，且描写和戏份较多，但直到结局男主都没有把女主收入后宫。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>拒女</label>
+				<div class="text-detail"><small>拒女：指男主因为各种原因/理由/借口，而无视或者拒绝女主的爱意或者表白。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>面具流</label>
+				<div class="text-detail"><small>面具流：指主角利用面具或换脸等方式，使用另外一个身份，并导致女主对这个虚假的身份产生好感。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="5"/>亵女（轻度）</label>
+				<div class="text-detail"><small>亵女：指女主被主角之外的异性占便宜，但又没收到实质性伤害。在本问卷中轻度亵女包括被人用言语骚扰，被人摸手，被隔着衣服摸重点部位等程度较轻的情形。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="30"/>送女</label>
+				<div class="text-detail"><small>送女：指主角把女主/准女主/明显有感情交集的角色送给配角/反派的行为。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="30"/>破鞋</label>
+				<div class="text-detail"><small>破鞋：指女主角被其他男性玩弄后又被抛弃。简称PX。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="30"/>分身流（有意识）</label>
+				<div class="text-detail"><small>分身流（有意识）：指主角利用武学/秘籍/系统/宝物等创造有独立意识的分身。即分身明白自己想做什么，虽然可能服从主角命令，但主角无法完全操纵。<br>*分身是可以收入后宫的异性的情形排除在外。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="30"/>亵女（重度）</label>
+				<div class="text-detail"><small>亵女：指女主被主角之外的异性占便宜，但又没收到实质性伤害。在本问卷中重度亵女包括爆衣，被人看光，被直接接触重点部位，甚至只差最后一步等程度较重的情形。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="50"/>万人骑</label>
+				<div class="text-detail"><small>万人骑：指女主与不计其数的男性都发生了关系。简称WRQ。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="100"/>背叛</label>
+				<div class="text-detail"><small>背叛：指女主背叛了主角的行为。包括迫不得已，为了家族活着门派的利益而出卖男主的行为。也包括在喜欢主角之后又喜欢上其他的男性。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="100"/>死女</label>
+				<div class="text-detail"><small>死女：指女主/准女主/明显有感情交集的角色因为各种各样的原因死亡，且无法复活。</small></div>
+				<label class="uk-text-lead"><input class="uk-checkbox" type="checkbox" value="100"/>绿帽</label>
+				<div class="text-detail"><small>绿帽：指女主在喜欢上主角以后，又和其他男性发生关系（包括被强迫和自愿）。</small></div>
 			  </form>
 			  <label class="uk-text-lead pull-right"><button uk-toggle="target: #modal-defence" type="button" class="uk-button uk-button-primary" onClick="showResult()">查看结果</button></label>
             </div>
