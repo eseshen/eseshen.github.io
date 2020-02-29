@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
+    <script src="https://eseshen.github.io/js/jquery-latest.js"></script>
+    <script>
+      function showResult() {
+        var result = 0;
+        var text = "";
+        $("input:checkbox:checked").each(function(item) {
+          result += item.value;
+        });
+        if (result <= 2) {
+          text = "零防";
+        } else if (result <= 15) {
+          text = "布甲";
+        } else if (result <= 29) {
+          text = "皮甲";
+        } else if (result <= 79) {
+          text = "重甲";
+        } else {
+          text = "神防";
+        }
+        alert(text);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>测试你的防御</h1>
+    <div>
+      <input type="checkbox" name="category" value="1" />非初<i
+        class="fas fa-info-circle"
+        title="非初：指女主的初牵/初抱/初吻/...给了男主以外其他人。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="1" />惧女<i
+        class="fas fa-info-circle"
+        title="惧女：指女主过于强势，而主角软弱不堪地接受女主的命令和指挥，逆来顺受。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="1" />神雕<i
+        class="fas fa-info-circle"
+        title="神雕：指文中出现有比女主们还要优秀还要漂亮的女性角色，但该女性角色却是属于别人的，已经名花有主。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="1" />兄弟情结<i
+        class="fas fa-info-circle"
+        title="兄弟情结：指主角将与兄弟/部下的感情看的比什么都重，各种好处都要分给兄弟，甚至为了兄弟损害自己正当利益。*主角虽然重视与兄弟感情，但是明白利益的纠纷的情况在此处不计入内。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="1" />分身流（无意识）<i
+        class="fas fa-info-circle"
+        title="分身流（无意识）：指主角利用武学/秘籍/系统/宝物等创造无独立意识的分身。仅限于分身完全是由主角操控的第二个身体的情形。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="5" />非处<i
+        class="fas fa-info-circle"
+        title="非处：指女主非处女。简写做FC。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="5" />人妻<i
+        class="fas fa-info-circle"
+        title="人妻：指女主已嫁为人妇。简写做RQ。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="5" />漏女<i
+        class="fas fa-info-circle"
+        title="漏女：指女主跟男主有明显感情交集，且描写和戏份较多，但直到结局男主都没有把女主收入后宫。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="5" />拒女<i
+        class="fas fa-info-circle"
+        title="拒女：指男主因为各种原因/理由/借口，而无视或者拒绝女主的爱意或者表白。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="5" />面具流<i
+        class="fas fa-info-circle"
+        title="面具流：指主角利用面具或换脸等方式，使用另外一个身份，并导致女主对这个虚假的身份产生好感。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="5" />亵女（轻度）<i
+        class="fas fa-info-circle"
+        title="亵女：指女主被主角之外的异性占便宜，但又没收到实质性伤害。在本问卷中轻度亵女包括被人用言语骚扰，被人摸手，被隔着衣服摸重点部位等程度较轻的情形。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="30" />送女<i
+        class="fas fa-info-circle"
+        title="送女：指主角把女主/准女主/明显有感情交集的角色送给配角/反派的行为。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="30" />破鞋<i
+        class="fas fa-info-circle"
+        title="破鞋：指女主角被其他男性玩弄后又被抛弃。简称PX。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="30" />分身流（有意识）<i
+        class="fas fa-info-circle"
+        title="分身流（有意识）：指主角利用武学/秘籍/系统/宝物等创造有独立意识的分身。即分身明白自己想做什么，虽然可能服从主角命令，但主角无法完全操纵。*分身是可以收入后宫的异性的情形排除在外。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="30" />亵女（重度）<i
+        class="fas fa-info-circle"
+        title="亵女：指女主被主角之外的异性占便宜，但又没收到实质性伤害。在本问卷中重度亵女包括爆衣，被人看光，被直接接触重点部位，甚至只差最后一步等程度较重的情形。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="50" />万人骑<i
+        class="fas fa-info-circle"
+        title="万人骑：指女主与不计其数的男性都发生了关系。简称WRQ。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="100" />背叛<i
+        class="fas fa-info-circle"
+        title="背叛：指女主背叛了主角的行为。包括迫不得已，为了家族活着门派的利益而出卖男主的行为。也包括在喜欢主角之后又喜欢上其他的男性。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="100" />死女<i
+        class="fas fa-info-circle"
+        title="死女：指女主/准女主/明显有感情交集的角色因为各种各样的原因死亡，且无法复活。"
+      ></i>
+    </div>
+    <div>
+      <input type="checkbox" name="category" value="100" />绿帽<i
+        class="fas fa-info-circle"
+        title="绿帽：指女主在喜欢上主角以后，又和其他男性发生关系（包括被强迫和自愿）。"
+      ></i>
+    </div>
+    <input type="button" onClick="showResult()" value="显示结果" />
+  </body>
+</html>
