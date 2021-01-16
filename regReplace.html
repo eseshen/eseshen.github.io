@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<script src="https://eseshen.github.io/js/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+	<div>
+		<label for='novel'>请选择一个TXT文件: </label>
+		<input id='novel' type='file'>
+	</div>
+
+	<div>
+		<label for='regex'>请输入要查找的正则表达式: </label>
+		<input id='regex' type='text'>
+	</div>
+
+	<div>
+		<label for='target'>请输入要替换的结果: </label>
+		<input id='target' type='text'>
+	</div>
+
+	<div>
+		<button id='generate' type='button'>生成</button>
+	</div>
+
+	<script>
+		var content;
+
+		String.prototype.replaceAll = function(search, replacement) {
+			var target = this;
+			return target.replace(new RegExp(search, 'g'), replacement);
+		};
+
+		function createAndDownloadFile(fileName, content) {
+			var aTag = document.createElement('a');
+			var blob = new Blob([content]);
+			aTag.download = fileName;
+			aTag.href = URL.createObjectURL(blob);
+			aTag.click();
+			URL.revokeObjectURL(blob);
+		}
+
+		$('#generate').on('click', function(e) {
+			var file = $('#novel')[0].files[0];
+			if (!file) {
+				alert('请选择一个文件');
+				return;
+			}
+
+			var filename = file.name;
+			if (window.FileReader) {
+				var reader = new FileReader();
+				reader.onloadend = function(evt) {
+					if (evt.target.readyState == FileReader.DONE) {
+						content = evt.target.result;
+						//console.log(content);
+						var regex = eval('/' + $('#regex').val() + '/');
+						var target = $('#target').val();
+						var result = content;
+
+						var limit = 1000;
+
+						while (result.match(regex) && limit>0) {
+							result = result.replaceAll(regex, target);
+							limit--;
+							console.log(limit);
+						}
+
+						var newname = filename.split('.')[0] + "(已处理).txt";
+						createAndDownloadFile(newname, result);
+
+					}
+				};
+
+				reader.readAsText(file, 'GBK');
+			}
+		});
+	</script>
+</body>
+
+</html>
