@@ -21,6 +21,10 @@ http://111.29.9.48:6610/000000001000/5000000010000017540/index.m3u8?channel-id=b
 https://live.olelive.com:6443/live/CCTV5HD_1080/hls.m3u8
 #EXTINF:-1 ,CCTV5+-1
 https://live.olelive.com:6443/live/CCTV5PHD/hls.m3u8
+#EXTINF:-1 ,CCTV5+
+http://39.134.39.39/PLTV/88888888/224/3221226253/index.m3u8
+#EXTINF:-1 ,CCTV5+
+http://39.134.115.163:8080/PLTV/88888910/224/3221225649/index.m3u8
 #EXTINF:-1 ,CCTV6-1
 https://live.olelive.com:6443/live/CCTV6HD/hls.m3u8
 #EXTINF:-1 ,CCTV1-1
