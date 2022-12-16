@@ -72,9 +72,6 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225648/index.m3u8
 #EXTINF:-1 group-title="央视Good" tvg-logo="https://wtv.tools.bianbingdang.com/prod/api/v1/tvg/logo/CCTV5"tvg-name="CCTV5",CCTV-05
 http://123.6.9.146/live/jz-cctv-5/live.m3u8
 
-#EXTINF:-1 group-title="央视Bad" tvg-logo="https://wtv.tools.bianbingdang.com/prod/api/v1/tvg/logo/CCTV5"tvg-name="CCTV5",CCTV-05
-http://39.134.116.30:8080/PLTV/88888910/224/3221225649/index.m3u8
-
 #EXTINF:-1 group-title="央视Bad" tvg-logo="http://epg.51zmt.top:8000/tb1/CCTV/CCTV5.png"tvg-name="CCTV5",CCTV-05
 http://39.134.115.163:8080/TVOD/88888910/224/3221225633/index.m3u8
 
@@ -86,6 +83,9 @@ http://39.134.24.161/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226395/inde
 
 #EXTINF:-1 group-title="央视Bad"tvg-name="CCTV5",CCTV-05
 http://39.134.24.162/dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226395/index.m3u8?
+
+#EXTINF:-1 group-title="央视Bad" tvg-logo="https://wtv.tools.bianbingdang.com/prod/api/v1/tvg/logo/CCTV5"tvg-name="CCTV5+",CCTV-05+
+http://39.134.116.30:8080/PLTV/88888910/224/3221225649/index.m3u8
 
 #EXTINF:-1 group-title="央视Bad" tvg-logo="https://live.fanmingming.com/tv/CCTV5+.png"tvg-name="CCTV5+",CCTV-05+
 http://dbiptv.sn.chinamobile.com/PLTV/88888890/224/3221226221/index.m3u8
