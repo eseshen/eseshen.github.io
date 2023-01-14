@@ -1,512 +1,513 @@
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV7[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV7[1920*1080][1920*1080][1920*1080]",CCTV7[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225624/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="超级电影[1920*1080][1920*1080][1920*1080]" tvg-id="超级电影[1920*1080][1920*1080][1920*1080]",超级电影[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225623/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="超级电视剧[1920*1080][1920*1080][1920*1080]" tvg-id="超级电视剧[1920*1080][1920*1080][1920*1080]",超级电视剧[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225625/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV10[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV10[1920*1080][1920*1080][1920*1080]",CCTV10[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225627/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV9[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV9[1920*1080][1920*1080][1920*1080]",CCTV9[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225626/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV11[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV11[1920*1080][1920*1080][1920*1080]",CCTV11[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225628/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV1[1280*720][1280*720][1280*720]" tvg-id="CCTV1[1280*720][1280*720][1280*720]",CCTV1[1280*720][1280*720][1280*720]
+#EXTINF:-1 tvg-name="CCTV1" tvg-id="CCTV1" group-title="天涯-720",CCTV1
 http://39.134.115.221:8080/PLTV/88888910/224/3221225630/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV12[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV12[1920*1080][1920*1080][1920*1080]",CCTV12[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225629/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV8[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV8[1920*1080][1920*1080][1920*1080]",CCTV8[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225631/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV3[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV3[1920*1080][1920*1080][1920*1080]",CCTV3[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225634/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV6[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV6[1920*1080][1920*1080][1920*1080]",CCTV6[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225632/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV5[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV5[1920*1080][1920*1080][1920*1080]",CCTV5[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225633/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV8[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV8[1920*1080][1920*1080][1920*1080]",CCTV8[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225635/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV13[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV13[1920*1080][1920*1080][1920*1080]",CCTV13[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225638/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV10[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV10[1920*1080][1920*1080][1920*1080]",CCTV10[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225636/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV14[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV14[1920*1080][1920*1080][1920*1080]",CCTV14[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225639/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV15[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV15[1920*1080][1920*1080][1920*1080]",CCTV15[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225641/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV14[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV14[1920*1080][1920*1080][1920*1080]",CCTV14[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225640/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV1[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV1[1920*1080][1920*1080][1920*1080]",CCTV1[1920*1080][1920*1080][1920*1080]
+#EXTINF:-1 tvg-name="CCTV1" tvg-id="CCTV1" group-title="天涯-1080",CCTV1
 http://39.134.115.221:8080/PLTV/88888910/224/3221225642/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV7[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV7[1920*1080][1920*1080][1920*1080]",CCTV7[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225644/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV9[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV9[1920*1080][1920*1080][1920*1080]",CCTV9[1920*1080][1920*1080][1920*1080]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225646/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV2[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV2[1920*1080][1920*1080][1920*1080]",CCTV2[1920*1080][1920*1080][1920*1080]
+#EXTINF:-1 tvg-name="CCTV2" tvg-id="CCTV2" group-title="天涯-1080",CCTV2
 http://39.134.115.221:8080/PLTV/88888910/224/3221225643/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV3[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV3[1920*1080][1920*1080][1920*1080]",CCTV3[1920*1080][1920*1080][1920*1080]
+#EXTINF:-1 tvg-name="CCTV3" tvg-id="CCTV3" group-title="天涯-1080",CCTV3
+http://39.134.115.221:8080/PLTV/88888910/224/3221225634/index.m3u8
+
+#EXTINF:-1 tvg-name="CCTV3" tvg-id="CCTV3" group-title="天涯-1080",CCTV3
 http://39.134.115.221:8080/PLTV/88888910/224/3221225647/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="CGTN记录[1024*576][1024*576][1024*576]" tvg-id="CGTN记录[1024*576][1024*576][1024*576]",CGTN记录[1024*576][1024*576][1024*576]
-http://39.134.115.221:8080/PLTV/88888910/224/3221225645/index.m3u8
+#EXTINF:-1 tvg-name="CCTV5" tvg-id="CCTV5" group-title="天涯-1080",CCTV5
+http://39.134.115.221:8080/PLTV/88888910/224/3221225633/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="CCTV5+[1920*1080][1920*1080][1920*1080]" tvg-id="CCTV5+[1920*1080][1920*1080][1920*1080]",CCTV5+[1920*1080][1920*1080][1920*1080]
+#EXTINF:-1 tvg-name="CCTV5+" tvg-id="CCTV5+" group-title="天涯-1080",CCTV5+
 http://39.134.115.221:8080/PLTV/88888910/224/3221225649/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="北京卫视蓝光[1920*1080]" tvg-id="北京卫视蓝光[1920*1080]",北京卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225673/index.m3u8
+#EXTINF:-1 tvg-name="CCTV6" tvg-id="CCTV6" group-title="天涯-1080",CCTV6
+http://39.134.115.221:8080/PLTV/88888910/224/3221225632/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="重庆卫视蓝光[1920*1080]" tvg-id="重庆卫视蓝光[1920*1080]",重庆卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225692/index.m3u8
+#EXTINF:-1 tvg-name="CCTV7" tvg-id="CCTV7" group-title="天涯-1080",CCTV7
+http://39.134.115.221:8080/PLTV/88888910/224/3221225624/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="纯享4k[3840*2160]" tvg-id="纯享4k[3840*2160]",纯享4k[3840*2160]
-http://39.135.138.60:18890/PLTV/88888910/224/3221225786/index.m3u8
+#EXTINF:-1 tvg-name="CCTV7" tvg-id="CCTV7" group-title="天涯-1080",CCTV7
+http://39.134.115.221:8080/PLTV/88888910/224/3221225644/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="东方卫视蓝光[1920*1080]" tvg-id="东方卫视蓝光[1920*1080]",东方卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225658/index.m3u8
+#EXTINF:-1 tvg-name="CCTV8" tvg-id="CCTV8" group-title="天涯-1080",CCTV8
+http://39.134.115.221:8080/PLTV/88888910/224/3221225631/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="东方卫视蓝光[1920*1080]" tvg-id="东方卫视蓝光[1920*1080]",东方卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225659/index.m3u8
+#EXTINF:-1 tvg-name="CCTV8" tvg-id="CCTV8" group-title="天涯-1080",CCTV8
+http://39.134.115.221:8080/PLTV/88888910/224/3221225635/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="东南卫视蓝光[1920*1080]" tvg-id="东南卫视蓝光[1920*1080]",东南卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225657/index.m3u8
+#EXTINF:-1 tvg-name="CCTV9" tvg-id="CCTV9" group-title="天涯-1080",CCTV9
+http://39.134.115.221:8080/PLTV/88888910/224/3221225626/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="广东卫视蓝光[1920*1080]" tvg-id="广东卫视蓝光[1920*1080]",广东卫视蓝光[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225742/index.m3u8
+#EXTINF:-1 tvg-name="CCTV9" tvg-id="CCTV9" group-title="天涯-1080",CCTV9
+http://39.134.115.221:8080/PLTV/88888910/224/3221225646/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="广东卫视蓝光[1920*1080]" tvg-id="广东卫视蓝光[1920*1080]",广东卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225701/index.m3u8
+#EXTINF:-1 tvg-name="CCTV10" tvg-id="CCTV10" group-title="天涯-1080",CCTV10
+http://39.134.115.221:8080/PLTV/88888910/224/3221225627/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="黑龙江卫视蓝光[1920*1080]" tvg-id="黑龙江卫视蓝光[1920*1080]",黑龙江卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225690/index.m3u8
+#EXTINF:-1 tvg-name="CCTV10" tvg-id="CCTV10" group-title="天涯-1080",CCTV10
+http://39.134.115.221:8080/PLTV/88888910/224/3221225636/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="黑龙江卫视蓝光[1920*1080]" tvg-id="黑龙江卫视蓝光[1920*1080]",黑龙江卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225736/index.m3u8
+#EXTINF:-1 tvg-name="CCTV11" tvg-id="CCTV11" group-title="天涯-1080",CCTV11
+http://39.134.115.221:8080/PLTV/88888910/224/3221225628/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="黑龙江卫视蓝光[1920*1080]" tvg-id="黑龙江卫视蓝光[1920*1080]",黑龙江卫视蓝光[1920*1080]
-http://39.134.116.30:8080/PLTV/88888910/224/3221225690/index.m3u8
+#EXTINF:-1 tvg-name="CCTV12" tvg-id="CCTV12" group-title="天涯-1080",CCTV12
+http://39.134.115.221:8080/PLTV/88888910/224/3221225629/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="江苏卫视蓝光[1920*1080]" tvg-id="江苏卫视蓝光[1920*1080]",江苏卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225702/index.m3u8
+#EXTINF:-1 tvg-name="CCTV13" tvg-id="CCTV13" group-title="天涯-1080",CCTV13
+http://39.134.115.221:8080/PLTV/88888910/224/3221225638/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="江苏卫视蓝光[1920*1080]" tvg-id="江苏卫视蓝光[1920*1080]",江苏卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225743/index.m3u8
+#EXTINF:-1 tvg-name="CCTV14" tvg-id="CCTV14" group-title="天涯-1080",CCTV14
+http://39.134.115.221:8080/PLTV/88888910/224/3221225639/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="江西卫视蓝光[1920*1080]" tvg-id="江西卫视蓝光[1920*1080]",江西卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225746/index.m3u8
+#EXTINF:-1 tvg-name="CCTV14" tvg-id="CCTV14" group-title="天涯-1080",CCTV14
+http://39.134.115.221:8080/PLTV/88888910/224/3221225640/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="江西卫视蓝光[1920*1080]" tvg-id="江西卫视蓝光[1920*1080]",江西卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225705/index.m3u8
+#EXTINF:-1 tvg-name="CCTV15" tvg-id="CCTV15" group-title="天涯-1080",CCTV15
+http://39.134.115.221:8080/PLTV/88888910/224/3221225641/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="辽宁卫视蓝光[1920*1080]" tvg-id="辽宁卫视蓝光[1920*1080]",辽宁卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225696/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="辽宁卫视蓝光[1920*1080]" tvg-id="辽宁卫视蓝光[1920*1080]",辽宁卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225735/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="山东卫视蓝光[1920*1080]" tvg-id="山东卫视蓝光[1920*1080]",山东卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225697/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="深圳卫视蓝光[1920*1080]" tvg-id="深圳卫视蓝光[1920*1080]",深圳卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225741/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="深圳卫视蓝光[1920*1080]" tvg-id="深圳卫视蓝光[1920*1080]",深圳卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225700/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="天津卫视蓝光[1920*1080]" tvg-id="天津卫视蓝光[1920*1080]",天津卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225739/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="天津卫视蓝光[1920*1080]" tvg-id="天津卫视蓝光[1920*1080]",天津卫视蓝光[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225698/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="云南卫视蓝光[768*576]" tvg-id="云南卫视蓝光[768*576]",云南卫视蓝光[768*576]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225664/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="明星大片[1920*1080][1920*1080]" tvg-id="明星大片[1920*1080][1920*1080]",明星大片[1920*1080][1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225716/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="西藏卫视[768*576]" tvg-id="西藏卫视[768*576]",西藏卫视[768*576]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225723/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="西藏卫视[768*576]" tvg-id="西藏卫视[768*576]",西藏卫视[768*576]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225723/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="西藏卫视[768*576]" tvg-id="西藏卫视[768*576]",西藏卫视[768*576]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225723/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="西藏卫视[768*576]" tvg-id="西藏卫视[768*576]",西藏卫视[768*576]
-http://117.169.120.140:8080/live/xizangstv/.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="安徽卫视[1920*1080]" tvg-id="安徽卫视[1920*1080]",安徽卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225737/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="安徽卫视[1920*1080]" tvg-id="安徽卫视[1920*1080]",安徽卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225691/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="安徽卫视[1920*1080]" tvg-id="安徽卫视[1920*1080]",安徽卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225691/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="北京卫视[1920*1080]" tvg-id="北京卫视[1920*1080]",北京卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225673/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="北京卫视[1920*1080]" tvg-id="北京卫视[1920*1080]",北京卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225673/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="北京卫视[1920*1080]" tvg-id="北京卫视[1920*1080]",北京卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225674/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="北京卫视[1920*1080]" tvg-id="北京卫视[1920*1080]",北京卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225600/index.m3u8?fmt=ts2hls
-
-#EXTINF:-1 group-title="天涯" tvg-name="北京卫视[1920*1080]" tvg-id="北京卫视[1920*1080]",北京卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225674/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="北京卫视[1920*1080]" tvg-id="北京卫视[1920*1080]",北京卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225674/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="北京卫视[1920*1080]" tvg-id="北京卫视[1920*1080]",北京卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225673/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="北京卫视[1920*1080]" tvg-id="北京卫视[1920*1080]",北京卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888888/224/3221225673/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="东方卫视[1920*1080]" tvg-id="东方卫视[1920*1080]",东方卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225659/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="东方卫视[1920*1080]" tvg-id="东方卫视[1920*1080]",东方卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225658/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="东方卫视[1920*1080]" tvg-id="东方卫视[1920*1080]",东方卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888888/224/3221225659/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="东方卫视[1920*1080]" tvg-id="东方卫视[1920*1080]",东方卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225658/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="东方卫视[1920*1080]" tvg-id="东方卫视[1920*1080]",东方卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225659/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="甘肃卫视[768*576]" tvg-id="甘肃卫视[768*576]",甘肃卫视[768*576]
-http://39.135.138.60:18890/PLTV/88888910/224/3221225724/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="甘肃卫视[768*576]" tvg-id="甘肃卫视[768*576]",甘肃卫视[768*576]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225724/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="甘肃卫视[768*576]" tvg-id="甘肃卫视[768*576]",甘肃卫视[768*576]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225724/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="广东卫视[1920*1080]" tvg-id="广东卫视[1920*1080]",广东卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225742/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="广东卫视[1920*1080]" tvg-id="广东卫视[1920*1080]",广东卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225597/index.m3u8?fmt=ts2hls
-
-#EXTINF:-1 group-title="天涯" tvg-name="广东卫视[1920*1080]" tvg-id="广东卫视[1920*1080]",广东卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225701/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="广东卫视[1920*1080]" tvg-id="广东卫视[1920*1080]",广东卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225742/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="广东卫视[1920*1080]" tvg-id="广东卫视[1920*1080]",广东卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225742/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="广东卫视[1920*1080]" tvg-id="广东卫视[1920*1080]",广东卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225701/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="黑龙江卫视[1920*1080]" tvg-id="黑龙江卫视[1920*1080]",黑龙江卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225736/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="黑龙江卫视[1920*1080]" tvg-id="黑龙江卫视[1920*1080]",黑龙江卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225690/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="黑龙江卫视[1920*1080]" tvg-id="黑龙江卫视[1920*1080]",黑龙江卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225736/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="黑龙江卫视[1920*1080]" tvg-id="黑龙江卫视[1920*1080]",黑龙江卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225690/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="黑龙江卫视[1920*1080]" tvg-id="黑龙江卫视[1920*1080]",黑龙江卫视[1920*1080]
-http://183.207.249.36:80/PLTV/4/224/3221227323/index.m3u8?
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖北卫视[1920*1080]" tvg-id="湖北卫视[1920*1080]",湖北卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225699/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖北卫视[1920*1080]" tvg-id="湖北卫视[1920*1080]",湖北卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225699/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖北卫视[1920*1080]" tvg-id="湖北卫视[1920*1080]",湖北卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225699/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖北卫视[1920*1080]" tvg-id="湖北卫视[1920*1080]",湖北卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225740/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖北卫视[1920*1080]" tvg-id="湖北卫视[1920*1080]",湖北卫视[1920*1080]
-http://117.169.120.140:8080/live/hdhubeistv/.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖北卫视[1920*1080]" tvg-id="湖北卫视[1920*1080]",湖北卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225699/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖北卫视[1920*1080]" tvg-id="湖北卫视[1920*1080]",湖北卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225740/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖南卫视[1920*1080]" tvg-id="湖南卫视[1920*1080]",湖南卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225704/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖南卫视[1920*1080]" tvg-id="湖南卫视[1920*1080]",湖南卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225745/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖南卫视[1920*1080]" tvg-id="湖南卫视[1920*1080]",湖南卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888888/224/3221225704/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖南卫视[1920*1080]" tvg-id="湖南卫视[1920*1080]",湖南卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225704/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖南卫视[1920*1080]" tvg-id="湖南卫视[1920*1080]",湖南卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225745/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖南卫视[1920*1080]" tvg-id="湖南卫视[1920*1080]",湖南卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225704/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="湖南卫视[1920*1080]" tvg-id="湖南卫视[1920*1080]",湖南卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225704/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="江苏卫视[1920*1080]" tvg-id="江苏卫视[1920*1080]",江苏卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225702/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="江苏卫视[1920*1080]" tvg-id="江苏卫视[1920*1080]",江苏卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225702/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="辽宁卫视[1920*1080]" tvg-id="辽宁卫视[1920*1080]",辽宁卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225735/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="辽宁卫视[1920*1080]" tvg-id="辽宁卫视[1920*1080]",辽宁卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888888/224/3221225696/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="辽宁卫视[1920*1080]" tvg-id="辽宁卫视[1920*1080]",辽宁卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225696/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="辽宁卫视[1920*1080]" tvg-id="辽宁卫视[1920*1080]",辽宁卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225735/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="辽宁卫视[1920*1080]" tvg-id="辽宁卫视[1920*1080]",辽宁卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225696/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="内蒙古卫视[768*576]" tvg-id="内蒙古卫视[768*576]",内蒙古卫视[768*576]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225667/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="内蒙古卫视[768*576]" tvg-id="内蒙古卫视[768*576]",内蒙古卫视[768*576]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225667/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="宁夏卫视[785*576]" tvg-id="宁夏卫视[785*576]",宁夏卫视[785*576]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225726/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="宁夏卫视[785*576]" tvg-id="宁夏卫视[785*576]",宁夏卫视[785*576]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225726/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="山东卫视[1920*1080]" tvg-id="山东卫视[1920*1080]",山东卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225738/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="山东卫视[1920*1080]" tvg-id="山东卫视[1920*1080]",山东卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225738/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="山东卫视[1920*1080]" tvg-id="山东卫视[1920*1080]",山东卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225738/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="山东卫视[1920*1080]" tvg-id="山东卫视[1920*1080]",山东卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225484/index.m3u8?fmt=ts2hls
-
-#EXTINF:-1 group-title="天涯" tvg-name="山东卫视[1920*1080]" tvg-id="山东卫视[1920*1080]",山东卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225697/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="陕西卫视[768*576]" tvg-id="陕西卫视[768*576]",陕西卫视[768*576]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225729/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="陕西卫视[768*576]" tvg-id="陕西卫视[768*576]",陕西卫视[768*576]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225729/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="深圳卫视[1920*1080]" tvg-id="深圳卫视[1920*1080]",深圳卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225741/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="深圳卫视[1920*1080]" tvg-id="深圳卫视[1920*1080]",深圳卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225741/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="深圳卫视[1920*1080]" tvg-id="深圳卫视[1920*1080]",深圳卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225700/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="天津卫视[1920*1080]" tvg-id="天津卫视[1920*1080]",天津卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225698/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="天津卫视[1920*1080]" tvg-id="天津卫视[1920*1080]",天津卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225739/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="天津卫视[1920*1080]" tvg-id="天津卫视[1920*1080]",天津卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225698/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="天津卫视[1920*1080]" tvg-id="天津卫视[1920*1080]",天津卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225485/index.m3u8?fmt=ts2hls
-
-#EXTINF:-1 group-title="天涯" tvg-name="天津卫视[1920*1080]" tvg-id="天津卫视[1920*1080]",天津卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225698/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888910/224/3221225703/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225744/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://39.134.115.163:8080/PLTV/88888910/224/3221225744/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225703/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://hw-m-l.cztv.com/channels/lantian/channel01/1080p.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://hw-m-l.cztv.com/channels/lantian/channel15/1080p.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://39.135.138.58:18890/PLTV/88888888/224/3221225703/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://hw-m-l.cztv.com/channels/lantian/channel13/1080p.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://hw-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225744/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225703/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="浙江卫视[1920*1080]" tvg-id="浙江卫视[1920*1080]",浙江卫视[1920*1080]
-http://183.207.249.34:80/PLTV/4/224/3221227393/index.m3u8?
-
-#EXTINF:-1 group-title="天涯" tvg-name="江西卫视[1920*1080]" tvg-id="江西卫视[1920*1080]",江西卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225705/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="江西卫视[1920*1080]" tvg-id="江西卫视[1920*1080]",江西卫视[1920*1080]
-http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225746/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="江西卫视[1920*1080]" tvg-id="江西卫视[1920*1080]",江西卫视[1920*1080]
-http://39.135.138.59:18890/PLTV/88888910/224/3221225705/index.m3u8
-
-#EXTINF:-1 group-title="天涯" tvg-name="东南卫视[1920*1080]" tvg-id="东南卫视[1920*1080]",东南卫视[1920*1080]
+#EXTINF:-1 tvg-name="东南卫视" tvg-id="东南卫视" group-title="天涯-1080",东南卫视
 http://39.135.138.58:18890/PLTV/88888910/224/3221225657/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="东南卫视[1920*1080]" tvg-id="东南卫视[1920*1080]",东南卫视[1920*1080]
+#EXTINF:-1 tvg-name="东南卫视" tvg-id="东南卫视" group-title="天涯-1080",东南卫视
 http://39.135.138.59:18890/PLTV/88888910/224/3221225657/index.m3u8
 
-#EXTINF:-1 group-title="天涯" tvg-name="东南卫视[1920*1080]" tvg-id="东南卫视[1920*1080]",东南卫视[1920*1080]
+#EXTINF:-1 tvg-name="东南卫视" tvg-id="东南卫视" group-title="天涯-1080",东南卫视
 http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225585/index.m3u8?fmt=ts2hls
 
-#EXTINF:-1 group-title="天涯" tvg-name="东南卫视[1920*1080]" tvg-id="东南卫视[1920*1080]",东南卫视[1920*1080]
+#EXTINF:-1 tvg-name="东南卫视" tvg-id="东南卫视" group-title="天涯-1080",东南卫视
 http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225657/index.m3u8
 
-#EXTINF:-1 group-title="天涯-4K" tvg-name="BTV纪实科教-8KSDR源" tvg-id="BTV纪实科教-8KSDR源",BTV纪实科教-8KSDR源
+#EXTINF:-1 tvg-name="东南卫视蓝光" tvg-id="东南卫视蓝光" group-title="天涯-1080",东南卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225657/index.m3u8
+
+#EXTINF:-1 tvg-name="东方卫视" tvg-id="东方卫视" group-title="天涯-1080",东方卫视
+http://39.135.138.58:18890/PLTV/88888888/224/3221225659/index.m3u8
+
+#EXTINF:-1 tvg-name="东方卫视" tvg-id="东方卫视" group-title="天涯-1080",东方卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225659/index.m3u8
+
+#EXTINF:-1 tvg-name="东方卫视" tvg-id="东方卫视" group-title="天涯-1080",东方卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225658/index.m3u8
+
+#EXTINF:-1 tvg-name="东方卫视" tvg-id="东方卫视" group-title="天涯-1080",东方卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225659/index.m3u8
+
+#EXTINF:-1 tvg-name="东方卫视" tvg-id="东方卫视" group-title="天涯-1080",东方卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225658/index.m3u8
+
+#EXTINF:-1 tvg-name="东方卫视蓝光" tvg-id="东方卫视蓝光" group-title="天涯-1080",东方卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225658/index.m3u8
+
+#EXTINF:-1 tvg-name="东方卫视蓝光" tvg-id="东方卫视蓝光" group-title="天涯-1080",东方卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225659/index.m3u8
+
+#EXTINF:-1 tvg-name="北京卫视" tvg-id="北京卫视" group-title="天涯-1080",北京卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225674/index.m3u8
+
+#EXTINF:-1 tvg-name="北京卫视" tvg-id="北京卫视" group-title="天涯-1080",北京卫视
+http://39.135.138.58:18890/PLTV/88888888/224/3221225673/index.m3u8
+
+#EXTINF:-1 tvg-name="北京卫视" tvg-id="北京卫视" group-title="天涯-1080",北京卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225673/index.m3u8
+
+#EXTINF:-1 tvg-name="北京卫视" tvg-id="北京卫视" group-title="天涯-1080",北京卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225673/index.m3u8
+
+#EXTINF:-1 tvg-name="北京卫视" tvg-id="北京卫视" group-title="天涯-1080",北京卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225674/index.m3u8
+
+#EXTINF:-1 tvg-name="北京卫视" tvg-id="北京卫视" group-title="天涯-1080",北京卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225600/index.m3u8?fmt=ts2hls
+
+#EXTINF:-1 tvg-name="北京卫视" tvg-id="北京卫视" group-title="天涯-1080",北京卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225673/index.m3u8
+
+#EXTINF:-1 tvg-name="北京卫视" tvg-id="北京卫视" group-title="天涯-1080",北京卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225674/index.m3u8
+
+#EXTINF:-1 tvg-name="北京卫视蓝光" tvg-id="北京卫视蓝光" group-title="天涯-1080",北京卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225673/index.m3u8
+
+#EXTINF:-1 tvg-name="天津卫视" tvg-id="天津卫视" group-title="天涯-1080",天津卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225698/index.m3u8
+
+#EXTINF:-1 tvg-name="天津卫视" tvg-id="天津卫视" group-title="天涯-1080",天津卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225698/index.m3u8
+
+#EXTINF:-1 tvg-name="天津卫视" tvg-id="天津卫视" group-title="天涯-1080",天津卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225485/index.m3u8?fmt=ts2hls
+
+#EXTINF:-1 tvg-name="天津卫视" tvg-id="天津卫视" group-title="天涯-1080",天津卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225698/index.m3u8
+
+#EXTINF:-1 tvg-name="天津卫视" tvg-id="天津卫视" group-title="天涯-1080",天津卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225739/index.m3u8
+
+#EXTINF:-1 tvg-name="天津卫视蓝光" tvg-id="天津卫视蓝光" group-title="天涯-1080",天津卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225698/index.m3u8
+
+#EXTINF:-1 tvg-name="天津卫视蓝光" tvg-id="天津卫视蓝光" group-title="天涯-1080",天津卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225739/index.m3u8
+
+#EXTINF:-1 tvg-name="安徽卫视" tvg-id="安徽卫视" group-title="天涯-1080",安徽卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225691/index.m3u8
+
+#EXTINF:-1 tvg-name="安徽卫视" tvg-id="安徽卫视" group-title="天涯-1080",安徽卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225737/index.m3u8
+
+#EXTINF:-1 tvg-name="安徽卫视" tvg-id="安徽卫视" group-title="天涯-1080",安徽卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225691/index.m3u8
+
+#EXTINF:-1 tvg-name="山东卫视" tvg-id="山东卫视" group-title="天涯-1080",山东卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225738/index.m3u8
+
+#EXTINF:-1 tvg-name="山东卫视" tvg-id="山东卫视" group-title="天涯-1080",山东卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225697/index.m3u8
+
+#EXTINF:-1 tvg-name="山东卫视" tvg-id="山东卫视" group-title="天涯-1080",山东卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225738/index.m3u8
+
+#EXTINF:-1 tvg-name="山东卫视" tvg-id="山东卫视" group-title="天涯-1080",山东卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225484/index.m3u8?fmt=ts2hls
+
+#EXTINF:-1 tvg-name="山东卫视" tvg-id="山东卫视" group-title="天涯-1080",山东卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225738/index.m3u8
+
+#EXTINF:-1 tvg-name="山东卫视蓝光" tvg-id="山东卫视蓝光" group-title="天涯-1080",山东卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225697/index.m3u8
+
+#EXTINF:-1 tvg-name="广东卫视" tvg-id="广东卫视" group-title="天涯-1080",广东卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225742/index.m3u8
+
+#EXTINF:-1 tvg-name="广东卫视" tvg-id="广东卫视" group-title="天涯-1080",广东卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225742/index.m3u8
+
+#EXTINF:-1 tvg-name="广东卫视" tvg-id="广东卫视" group-title="天涯-1080",广东卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225701/index.m3u8
+
+#EXTINF:-1 tvg-name="广东卫视" tvg-id="广东卫视" group-title="天涯-1080",广东卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225597/index.m3u8?fmt=ts2hls
+
+#EXTINF:-1 tvg-name="广东卫视" tvg-id="广东卫视" group-title="天涯-1080",广东卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225701/index.m3u8
+
+#EXTINF:-1 tvg-name="广东卫视" tvg-id="广东卫视" group-title="天涯-1080",广东卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225742/index.m3u8
+
+#EXTINF:-1 tvg-name="广东卫视蓝光" tvg-id="广东卫视蓝光" group-title="天涯-1080",广东卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225701/index.m3u8
+
+#EXTINF:-1 tvg-name="广东卫视蓝光" tvg-id="广东卫视蓝光" group-title="天涯-1080",广东卫视蓝光
+http://39.135.138.59:18890/PLTV/88888910/224/3221225742/index.m3u8
+
+#EXTINF:-1 tvg-name="明星大片" tvg-id="明星大片" group-title="天涯-1080",明星大片
+http://39.134.115.163:8080/PLTV/88888910/224/3221225716/index.m3u8
+
+#EXTINF:-1 tvg-name="江苏卫视" tvg-id="江苏卫视" group-title="天涯-1080",江苏卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225702/index.m3u8
+
+#EXTINF:-1 tvg-name="江苏卫视" tvg-id="江苏卫视" group-title="天涯-1080",江苏卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225702/index.m3u8
+
+#EXTINF:-1 tvg-name="江苏卫视蓝光" tvg-id="江苏卫视蓝光" group-title="天涯-1080",江苏卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225702/index.m3u8
+
+#EXTINF:-1 tvg-name="江苏卫视蓝光" tvg-id="江苏卫视蓝光" group-title="天涯-1080",江苏卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225743/index.m3u8
+
+#EXTINF:-1 tvg-name="江西卫视" tvg-id="江西卫视" group-title="天涯-1080",江西卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225705/index.m3u8
+
+#EXTINF:-1 tvg-name="江西卫视" tvg-id="江西卫视" group-title="天涯-1080",江西卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225705/index.m3u8
+
+#EXTINF:-1 tvg-name="江西卫视" tvg-id="江西卫视" group-title="天涯-1080",江西卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225746/index.m3u8
+
+#EXTINF:-1 tvg-name="江西卫视蓝光" tvg-id="江西卫视蓝光" group-title="天涯-1080",江西卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225705/index.m3u8
+
+#EXTINF:-1 tvg-name="江西卫视蓝光" tvg-id="江西卫视蓝光" group-title="天涯-1080",江西卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225746/index.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://183.207.249.34:80/PLTV/4/224/3221227393/index.m3u8?
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225703/index.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225744/index.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://39.135.138.58:18890/PLTV/88888888/224/3221225703/index.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225703/index.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225703/index.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225744/index.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://hw-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://hw-m-l.cztv.com/channels/lantian/channel01/1080p.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://hw-m-l.cztv.com/channels/lantian/channel13/1080p.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://hw-m-l.cztv.com/channels/lantian/channel15/1080p.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225703/index.m3u8
+
+#EXTINF:-1 tvg-name="浙江卫视" tvg-id="浙江卫视" group-title="天涯-1080",浙江卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225744/index.m3u8
+
+#EXTINF:-1 tvg-name="深圳卫视" tvg-id="深圳卫视" group-title="天涯-1080",深圳卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225741/index.m3u8
+
+#EXTINF:-1 tvg-name="深圳卫视" tvg-id="深圳卫视" group-title="天涯-1080",深圳卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225700/index.m3u8
+
+#EXTINF:-1 tvg-name="深圳卫视" tvg-id="深圳卫视" group-title="天涯-1080",深圳卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225741/index.m3u8
+
+#EXTINF:-1 tvg-name="深圳卫视蓝光" tvg-id="深圳卫视蓝光" group-title="天涯-1080",深圳卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225700/index.m3u8
+
+#EXTINF:-1 tvg-name="深圳卫视蓝光" tvg-id="深圳卫视蓝光" group-title="天涯-1080",深圳卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225741/index.m3u8
+
+#EXTINF:-1 tvg-name="湖北卫视" tvg-id="湖北卫视" group-title="天涯-1080",湖北卫视
+http://117.169.120.140:8080/live/hdhubeistv/.m3u8
+
+#EXTINF:-1 tvg-name="湖北卫视" tvg-id="湖北卫视" group-title="天涯-1080",湖北卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225699/index.m3u8
+
+#EXTINF:-1 tvg-name="湖北卫视" tvg-id="湖北卫视" group-title="天涯-1080",湖北卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225740/index.m3u8
+
+#EXTINF:-1 tvg-name="湖北卫视" tvg-id="湖北卫视" group-title="天涯-1080",湖北卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225699/index.m3u8
+
+#EXTINF:-1 tvg-name="湖北卫视" tvg-id="湖北卫视" group-title="天涯-1080",湖北卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225699/index.m3u8
+
+#EXTINF:-1 tvg-name="湖北卫视" tvg-id="湖北卫视" group-title="天涯-1080",湖北卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225699/index.m3u8
+
+#EXTINF:-1 tvg-name="湖北卫视" tvg-id="湖北卫视" group-title="天涯-1080",湖北卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225740/index.m3u8
+
+#EXTINF:-1 tvg-name="湖南卫视" tvg-id="湖南卫视" group-title="天涯-1080",湖南卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225704/index.m3u8
+
+#EXTINF:-1 tvg-name="湖南卫视" tvg-id="湖南卫视" group-title="天涯-1080",湖南卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225745/index.m3u8
+
+#EXTINF:-1 tvg-name="湖南卫视" tvg-id="湖南卫视" group-title="天涯-1080",湖南卫视
+http://39.135.138.58:18890/PLTV/88888888/224/3221225704/index.m3u8
+
+#EXTINF:-1 tvg-name="湖南卫视" tvg-id="湖南卫视" group-title="天涯-1080",湖南卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225704/index.m3u8
+
+#EXTINF:-1 tvg-name="湖南卫视" tvg-id="湖南卫视" group-title="天涯-1080",湖南卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225704/index.m3u8
+
+#EXTINF:-1 tvg-name="湖南卫视" tvg-id="湖南卫视" group-title="天涯-1080",湖南卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225745/index.m3u8
+
+#EXTINF:-1 tvg-name="湖南卫视" tvg-id="湖南卫视" group-title="天涯-1080",湖南卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225704/index.m3u8
+
+#EXTINF:-1 tvg-name="超级电影" tvg-id="超级电影" group-title="天涯-1080",超级电影
+http://39.134.115.221:8080/PLTV/88888910/224/3221225623/index.m3u8
+
+#EXTINF:-1 tvg-name="超级电视剧" tvg-id="超级电视剧" group-title="天涯-1080",超级电视剧
+http://39.134.115.221:8080/PLTV/88888910/224/3221225625/index.m3u8
+
+#EXTINF:-1 tvg-name="辽宁卫视" tvg-id="辽宁卫视" group-title="天涯-1080",辽宁卫视
+http://39.135.138.58:18890/PLTV/88888888/224/3221225696/index.m3u8
+
+#EXTINF:-1 tvg-name="辽宁卫视" tvg-id="辽宁卫视" group-title="天涯-1080",辽宁卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225696/index.m3u8
+
+#EXTINF:-1 tvg-name="辽宁卫视" tvg-id="辽宁卫视" group-title="天涯-1080",辽宁卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225735/index.m3u8
+
+#EXTINF:-1 tvg-name="辽宁卫视" tvg-id="辽宁卫视" group-title="天涯-1080",辽宁卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225696/index.m3u8
+
+#EXTINF:-1 tvg-name="辽宁卫视" tvg-id="辽宁卫视" group-title="天涯-1080",辽宁卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225735/index.m3u8
+
+#EXTINF:-1 tvg-name="辽宁卫视蓝光" tvg-id="辽宁卫视蓝光" group-title="天涯-1080",辽宁卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225696/index.m3u8
+
+#EXTINF:-1 tvg-name="辽宁卫视蓝光" tvg-id="辽宁卫视蓝光" group-title="天涯-1080",辽宁卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225735/index.m3u8
+
+#EXTINF:-1 tvg-name="重庆卫视蓝光" tvg-id="重庆卫视蓝光" group-title="天涯-1080",重庆卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225692/index.m3u8
+
+#EXTINF:-1 tvg-name="黑龙江卫视" tvg-id="黑龙江卫视" group-title="天涯-1080",黑龙江卫视
+http://183.207.249.36:80/PLTV/4/224/3221227323/index.m3u8?
+
+#EXTINF:-1 tvg-name="黑龙江卫视" tvg-id="黑龙江卫视" group-title="天涯-1080",黑龙江卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225736/index.m3u8
+
+#EXTINF:-1 tvg-name="黑龙江卫视" tvg-id="黑龙江卫视" group-title="天涯-1080",黑龙江卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225690/index.m3u8
+
+#EXTINF:-1 tvg-name="黑龙江卫视" tvg-id="黑龙江卫视" group-title="天涯-1080",黑龙江卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225690/index.m3u8
+
+#EXTINF:-1 tvg-name="黑龙江卫视" tvg-id="黑龙江卫视" group-title="天涯-1080",黑龙江卫视
+http://hwrr.jx.chinamobile.com:8080/PLTV/88888888/224/3221225736/index.m3u8
+
+#EXTINF:-1 tvg-name="黑龙江卫视蓝光" tvg-id="黑龙江卫视蓝光" group-title="天涯-1080",黑龙江卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225690/index.m3u8
+
+#EXTINF:-1 tvg-name="黑龙江卫视蓝光" tvg-id="黑龙江卫视蓝光" group-title="天涯-1080",黑龙江卫视蓝光
+http://39.134.115.163:8080/PLTV/88888910/224/3221225736/index.m3u8
+
+#EXTINF:-1 tvg-name="黑龙江卫视蓝光" tvg-id="黑龙江卫视蓝光" group-title="天涯-1080",黑龙江卫视蓝光
+http://39.134.116.30:8080/PLTV/88888910/224/3221225690/index.m3u8
+
+#EXTINF:-1 tvg-name="BTV纪实科教-8KSDR源" tvg-id="BTV纪实科教-8KSDR源" group-title="天涯-4K",BTV纪实科教-8KSDR源
 http://111.62.156.15/downlive.brtvcloud.com/8krongmei1502/1502rongmeike8k.m3u8
 
-#EXTINF:-1 group-title="天涯-4K" tvg-name="苏州4K" tvg-id="苏州4K",苏州4K
-http://liveshowbak2.kan0512.com/ksz-norecord/csztv4k_4k.m3u8
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="纯享4K备" tvg-id="纯享4K备",纯享4K备
-http://39.134.115.163:8080/PLTV/88888910/224/3221225786/index.m3u8
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="CCTV16-4K-25PHLG源" tvg-id="CCTV16-4K-25PHLG源",CCTV16-4K-25PHLG源
+#EXTINF:-1 tvg-name="CCTV16-4K-25PHLG源" tvg-id="CCTV16-4K-25PHLG源" group-title="天涯-4K",CCTV16-4K-25PHLG源
 http://live.cooltv.top/tv/aishang.php?id=cctv164k
 
-#EXTINF:-1 group-title="天涯-4K" tvg-name="爱上4K" tvg-id="爱上4K",爱上4K
-http://111.20.40.170/PLTV/88888893/224/3221226352/index.m3u8
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="北京BesTV-4K" tvg-id="北京BesTV-4K",北京BesTV-4K
-http://beifeng.site:4000/udp/239.3.1.249:8001
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="咪咕体育-4K-SDR源" tvg-id="咪咕体育-4K-SDR源",咪咕体育-4K-SDR源
-http://120.234.220.107:9000/udp/239.20.0.66:3136
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="咪咕体育-4K-HLG源" tvg-id="咪咕体育-4K-HLG源",咪咕体育-4K-HLG源
-http://117.136.156.66:80/000000001000/3000000010000005180/index.m3u8
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="咪咕体育-4K-HLG源-1" tvg-id="咪咕体育-4K-HLG源-1",咪咕体育-4K-HLG源-1
-http://117.136.156.71:80/000000001000/3000000010000005180/index.m3u8
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="咪咕体育-4K-HLG源-2" tvg-id="咪咕体育-4K-HLG源-2",咪咕体育-4K-HLG源-2
-http://117.136.156.35:80/000000001000/3000000010000005180/index.m3u8
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="BBC UHD" tvg-id="BBC UHD",BBC UHD
-http://sheriffwoody.in:80/Jeff1/Jeff1/3157685
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="Heritage 4k" tvg-id="Heritage 4k",Heritage 4k
-http://cdnx1.plusx.tv:8880/Heritage/mono.m3u8?token=cb776083b1e1b6f9bb2222
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="Now Sports UHD HK" tvg-id="Now Sports UHD HK",Now Sports UHD HK
-http://sheriffwoody.in:80/live/Jeff1/Jeff1/1042156.ts
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="Ziggo Sport 4K" tvg-id="Ziggo Sport 4K",Ziggo Sport 4K
-http://live.iptvtotaal.com:8000/awpreneniptv/09HZaVeOmh/20560
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="Hub Premier Sport 4K" tvg-id="Hub Premier Sport 4K",Hub Premier Sport 4K
-http://tvt3.xyz:2095/play/live.php?mac=00:1A:79:00:04:02&stream=348096&extension=ts&play_token=zpHQS3jtnW
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="DAZN F1 UHD 4K" tvg-id="DAZN F1 UHD 4K",DAZN F1 UHD 4K
-http://tribaliptv.com:8080/Gustavo/123456/4930
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="MOVISTAR LIGA DE CAMPEONES UHD 4K" tvg-id="MOVISTAR LIGA DE CAMPEONES UHD 4K",MOVISTAR LIGA DE CAMPEONES UHD 4K
-http://tribaliptv.com:8080/Gustavo/123456/12401
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="ODISEA UHD 4K" tvg-id="ODISEA UHD 4K",ODISEA UHD 4K
-http://tribaliptv.com:8080/Gustavo/123456/5195
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="Sport5 4k" tvg-id="Sport5 4k",Sport5 4k
-http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:c0:0f:95&stream=59033&extension=ts&play_token=h3Jb2BBUAL
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="DIGI 4k" tvg-id="DIGI 4k",DIGI 4k
-http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:c0:0f:95&stream=90814&extension=ts&play_token=AB1RNoAhBm
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="Insight UHD" tvg-id="Insight UHD",Insight UHD
-http://cdnx1.plusx.tv:8880/InsightUHD11/mono.m3u8?token=24cce35b06aecc51433333
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="TRAVELXP TV 4K" tvg-id="TRAVELXP TV 4K",TRAVELXP TV 4K
-http://cdnx1.plusx.tv:8880/Travelxp/mono.m3u8?token=24cce35b06aecc51433333
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="NASA 4k 60P" tvg-id="NASA 4k 60P",NASA 4k 60P
-http://cdnx1.plusx.tv:8880/NASA/mono.m3u8?token=24cce35b06aecc51433333
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="MYZEN TV 4K" tvg-id="MYZEN TV 4K",MYZEN TV 4K
-http://cdnx1.plusx.tv:8880/myZen/mono.m3u8?token=24cce35b06aecc51433333
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="ULTRA NATURE TV 4K" tvg-id="ULTRA NATURE TV 4K",ULTRA NATURE TV 4K
-http://185.236.229.31:9981/play/a01d
-
-#EXTINF:-1 group-title="天涯-4K" tvg-name="Clarity4K" tvg-id="Clarity4K",Clarity4K
+#EXTINF:-1 tvg-name="Clarity4K" tvg-id="Clarity4K" group-title="天涯-4K",Clarity4K
 https://d3thiix3tzne5u.cloudfront.net/playlist2160p.m3u8
 
-#EXTINF:-1 group-title="天涯-4K" tvg-name="爱自然" tvg-id="爱自然",爱自然
+#EXTINF:-1 tvg-name="DAZN F1 UHD 4K" tvg-id="DAZN F1 UHD 4K" group-title="天涯-4K",DAZN F1 UHD 4K
+http://tribaliptv.com:8080/Gustavo/123456/4930
+
+#EXTINF:-1 tvg-name="DIGI 4k" tvg-id="DIGI 4k" group-title="天涯-4K",DIGI 4k
+http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:c0:0f:95&stream=90814&extension=ts&play_token=AB1RNoAhBm
+
+#EXTINF:-1 tvg-name="Heritage 4k" tvg-id="Heritage 4k" group-title="天涯-4K",Heritage 4k
+http://cdnx1.plusx.tv:8880/Heritage/mono.m3u8?token=cb776083b1e1b6f9bb2222
+
+#EXTINF:-1 tvg-name="Hub Premier Sport 4K" tvg-id="Hub Premier Sport 4K" group-title="天涯-4K",Hub Premier Sport 4K
+http://tvt3.xyz:2095/play/live.php?mac=00:1A:79:00:04:02&stream=348096&extension=ts&play_token=zpHQS3jtnW
+
+#EXTINF:-1 tvg-name="Insight UHD" tvg-id="Insight UHD" group-title="天涯-4K",Insight UHD
+http://cdnx1.plusx.tv:8880/InsightUHD11/mono.m3u8?token=24cce35b06aecc51433333
+
+#EXTINF:-1 tvg-name="loupe 4K" tvg-id="loupe 4K" group-title="天涯-4K",loupe 4K
+https://d2dw21aq0j0l5c.cloudfront.net/playlist_3840x2160.m3u8
+
+#EXTINF:-1 tvg-name="MOVISTAR LIGA DE CAMPEONES UHD 4K" tvg-id="MOVISTAR LIGA DE CAMPEONES UHD 4K" group-title="天涯-4K",MOVISTAR LIGA DE CAMPEONES UHD 4K
+http://tribaliptv.com:8080/Gustavo/123456/12401
+
+#EXTINF:-1 tvg-name="MYZEN TV 4K" tvg-id="MYZEN TV 4K" group-title="天涯-4K",MYZEN TV 4K
+http://cdnx1.plusx.tv:8880/myZen/mono.m3u8?token=24cce35b06aecc51433333
+
+#EXTINF:-1 tvg-name="NASA 4k 60P" tvg-id="NASA 4k 60P" group-title="天涯-4K",NASA 4k 60P
+http://cdnx1.plusx.tv:8880/NASA/mono.m3u8?token=24cce35b06aecc51433333
+
+#EXTINF:-1 tvg-name="Now Sports UHD HK" tvg-id="Now Sports UHD HK" group-title="天涯-4K",Now Sports UHD HK
+http://sheriffwoody.in:80/live/Jeff1/Jeff1/1042156.ts
+
+#EXTINF:-1 tvg-name="ODISEA UHD 4K" tvg-id="ODISEA UHD 4K" group-title="天涯-4K",ODISEA UHD 4K
+http://tribaliptv.com:8080/Gustavo/123456/5195
+
+#EXTINF:-1 tvg-name="Sport5 4k" tvg-id="Sport5 4k" group-title="天涯-4K",Sport5 4k
+http://clientsportals.tv:2095/play/live.php?mac=00:1A:79:c0:0f:95&stream=59033&extension=ts&play_token=h3Jb2BBUAL
+
+#EXTINF:-1 tvg-name="TRAVELXP TV 4K" tvg-id="TRAVELXP TV 4K" group-title="天涯-4K",TRAVELXP TV 4K
+http://cdnx1.plusx.tv:8880/Travelxp/mono.m3u8?token=24cce35b06aecc51433333
+
+#EXTINF:-1 tvg-name="ULTRA NATURE TV 4K" tvg-id="ULTRA NATURE TV 4K" group-title="天涯-4K",ULTRA NATURE TV 4K
+http://185.236.229.31:9981/play/a01d
+
+#EXTINF:-1 tvg-name="Ziggo Sport 4K" tvg-id="Ziggo Sport 4K" group-title="天涯-4K",Ziggo Sport 4K
+http://live.iptvtotaal.com:8000/awpreneniptv/09HZaVeOmh/20560
+
+#EXTINF:-1 tvg-name="北京BesTV-4K" tvg-id="北京BesTV-4K" group-title="天涯-4K",北京BesTV-4K
+http://beifeng.site:4000/udp/239.3.1.249:8001
+
+#EXTINF:-1 tvg-name="咪咕体育-4K-HLG源-1" tvg-id="咪咕体育-4K-HLG源-1" group-title="天涯-4K",咪咕体育-4K-HLG源-1
+http://117.136.156.71:80/000000001000/3000000010000005180/index.m3u8
+
+#EXTINF:-1 tvg-name="咪咕体育-4K-HLG源-2" tvg-id="咪咕体育-4K-HLG源-2" group-title="天涯-4K",咪咕体育-4K-HLG源-2
+http://117.136.156.35:80/000000001000/3000000010000005180/index.m3u8
+
+#EXTINF:-1 tvg-name="咪咕体育-4K-HLG源" tvg-id="咪咕体育-4K-HLG源" group-title="天涯-4K",咪咕体育-4K-HLG源
+http://117.136.156.66:80/000000001000/3000000010000005180/index.m3u8
+
+#EXTINF:-1 tvg-name="咪咕体育-4K-SDR源" tvg-id="咪咕体育-4K-SDR源" group-title="天涯-4K",咪咕体育-4K-SDR源
+http://120.234.220.107:9000/udp/239.20.0.66:3136
+
+#EXTINF:-1 tvg-name="爱上4K" tvg-id="爱上4K" group-title="天涯-4K",爱上4K
+http://111.20.40.170/PLTV/88888893/224/3221226352/index.m3u8
+
+#EXTINF:-1 tvg-name="爱自然" tvg-id="爱自然" group-title="天涯-4K",爱自然
 https://d18dyiwu97wm6q.cloudfront.net/playlist2160p.m3u8
 
-#EXTINF:-1 group-title="天涯-4K" tvg-name="loupe 4K" tvg-id="loupe 4K",loupe 4K
-https://d2dw21aq0j0l5c.cloudfront.net/playlist_3840x2160.m3u8
+#EXTINF:-1 tvg-name="纯享4K备" tvg-id="纯享4K备" group-title="天涯-4K",纯享4K备
+http://39.134.115.163:8080/PLTV/88888910/224/3221225786/index.m3u8
+
+#EXTINF:-1 tvg-name="苏州4K" tvg-id="苏州4K" group-title="天涯-4K",苏州4K
+http://liveshowbak2.kan0512.com/ksz-norecord/csztv4k_4k.m3u8
+
+#EXTINF:-1 tvg-name="BBC UHD" tvg-id="BBC UHD" group-title="天涯-576-4K",BBC UHD
+http://sheriffwoody.in:80/Jeff1/Jeff1/3157685
+
+#EXTINF:-1 tvg-name="CGTN记录" tvg-id="CGTN记录" group-title="天涯-576",CGTN记录
+http://39.134.115.221:8080/PLTV/88888910/224/3221225645/index.m3u8
+
+#EXTINF:-1 tvg-name="云南卫视蓝光" tvg-id="云南卫视蓝光" group-title="天涯-576",云南卫视蓝光
+http://39.135.138.59:18890/PLTV/88888910/224/3221225664/index.m3u8
+
+#EXTINF:-1 tvg-name="内蒙古卫视" tvg-id="内蒙古卫视" group-title="天涯-576",内蒙古卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225667/index.m3u8
+
+#EXTINF:-1 tvg-name="内蒙古卫视" tvg-id="内蒙古卫视" group-title="天涯-576",内蒙古卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225667/index.m3u8
+
+#EXTINF:-1 tvg-name="宁夏卫视" tvg-id="宁夏卫视" group-title="天涯-576",宁夏卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225726/index.m3u8
+
+#EXTINF:-1 tvg-name="宁夏卫视" tvg-id="宁夏卫视" group-title="天涯-576",宁夏卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225726/index.m3u8
+
+#EXTINF:-1 tvg-name="甘肃卫视" tvg-id="甘肃卫视" group-title="天涯-576",甘肃卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225724/index.m3u8
+
+#EXTINF:-1 tvg-name="甘肃卫视" tvg-id="甘肃卫视" group-title="天涯-576",甘肃卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225724/index.m3u8
+
+#EXTINF:-1 tvg-name="甘肃卫视" tvg-id="甘肃卫视" group-title="天涯-576",甘肃卫视
+http://39.135.138.60:18890/PLTV/88888910/224/3221225724/index.m3u8
+
+#EXTINF:-1 tvg-name="西藏卫视" tvg-id="西藏卫视" group-title="天涯-576",西藏卫视
+http://117.169.120.140:8080/live/xizangstv/.m3u8
+
+#EXTINF:-1 tvg-name="西藏卫视" tvg-id="西藏卫视" group-title="天涯-576",西藏卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225723/index.m3u8
+
+#EXTINF:-1 tvg-name="西藏卫视" tvg-id="西藏卫视" group-title="天涯-576",西藏卫视
+http://39.135.138.58:18890/PLTV/88888910/224/3221225723/index.m3u8
+
+#EXTINF:-1 tvg-name="西藏卫视" tvg-id="西藏卫视" group-title="天涯-576",西藏卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225723/index.m3u8
+
+#EXTINF:-1 tvg-name="陕西卫视" tvg-id="陕西卫视" group-title="天涯-576",陕西卫视
+http://39.134.115.163:8080/PLTV/88888910/224/3221225729/index.m3u8
+
+#EXTINF:-1 tvg-name="陕西卫视" tvg-id="陕西卫视" group-title="天涯-576",陕西卫视
+http://39.135.138.59:18890/PLTV/88888910/224/3221225729/index.m3u8
+
+#EXTINF:-1 tvg-name="纯享4k" tvg-id="纯享4k" group-title="天涯-2K",纯享4k
+http://39.135.138.60:18890/PLTV/88888910/224/3221225786/index.m3u8
+
