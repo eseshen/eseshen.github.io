@@ -1,67 +1,67 @@
-#EXTINF:-1 tvg-name="CCTV1" tvg-id="CCTV1" group-title="天涯-720",CCTV1
+#EXTINF:-1 tvg-name="CCTV1" tvg-id="CCTV1" group-title="天涯-720",CCTV-01
 http://39.134.115.221:8080/PLTV/88888910/224/3221225630/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV1" tvg-id="CCTV1" group-title="天涯-1080",CCTV1
+#EXTINF:-1 tvg-name="CCTV1" tvg-id="CCTV1" group-title="天涯-1080",CCTV-01
 http://39.134.115.221:8080/PLTV/88888910/224/3221225642/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV2" tvg-id="CCTV2" group-title="天涯-1080",CCTV2
+#EXTINF:-1 tvg-name="CCTV2" tvg-id="CCTV2" group-title="天涯-1080",CCTV-02
 http://39.134.115.221:8080/PLTV/88888910/224/3221225643/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV3" tvg-id="CCTV3" group-title="天涯-1080",CCTV3
+#EXTINF:-1 tvg-name="CCTV3" tvg-id="CCTV3" group-title="天涯-1080",CCTV-03
 http://39.134.115.221:8080/PLTV/88888910/224/3221225634/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV3" tvg-id="CCTV3" group-title="天涯-1080",CCTV3
+#EXTINF:-1 tvg-name="CCTV3" tvg-id="CCTV3" group-title="天涯-1080",CCTV-03
 http://39.134.115.221:8080/PLTV/88888910/224/3221225647/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV5" tvg-id="CCTV5" group-title="天涯-1080",CCTV5
+#EXTINF:-1 tvg-name="CCTV5" tvg-id="CCTV5" group-title="天涯-1080",CCTV-05
 http://39.134.115.221:8080/PLTV/88888910/224/3221225633/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV5+" tvg-id="CCTV5+" group-title="天涯-1080",CCTV5+
+#EXTINF:-1 tvg-name="CCTV5+" tvg-id="CCTV5+" group-title="天涯-1080",CCTV-05+
 http://39.134.115.221:8080/PLTV/88888910/224/3221225649/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV6" tvg-id="CCTV6" group-title="天涯-1080",CCTV6
+#EXTINF:-1 tvg-name="CCTV6" tvg-id="CCTV6" group-title="天涯-1080",CCTV-06
 http://39.134.115.221:8080/PLTV/88888910/224/3221225632/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV7" tvg-id="CCTV7" group-title="天涯-1080",CCTV7
+#EXTINF:-1 tvg-name="CCTV7" tvg-id="CCTV7" group-title="天涯-1080",CCTV-07
 http://39.134.115.221:8080/PLTV/88888910/224/3221225624/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV7" tvg-id="CCTV7" group-title="天涯-1080",CCTV7
+#EXTINF:-1 tvg-name="CCTV7" tvg-id="CCTV7" group-title="天涯-1080",CCTV-07
 http://39.134.115.221:8080/PLTV/88888910/224/3221225644/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV8" tvg-id="CCTV8" group-title="天涯-1080",CCTV8
+#EXTINF:-1 tvg-name="CCTV8" tvg-id="CCTV8" group-title="天涯-1080",CCTV-08
 http://39.134.115.221:8080/PLTV/88888910/224/3221225631/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV8" tvg-id="CCTV8" group-title="天涯-1080",CCTV8
+#EXTINF:-1 tvg-name="CCTV8" tvg-id="CCTV8" group-title="天涯-1080",CCTV-08
 http://39.134.115.221:8080/PLTV/88888910/224/3221225635/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV9" tvg-id="CCTV9" group-title="天涯-1080",CCTV9
+#EXTINF:-1 tvg-name="CCTV9" tvg-id="CCTV9" group-title="天涯-1080",CCTV-09
 http://39.134.115.221:8080/PLTV/88888910/224/3221225626/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV9" tvg-id="CCTV9" group-title="天涯-1080",CCTV9
+#EXTINF:-1 tvg-name="CCTV9" tvg-id="CCTV9" group-title="天涯-1080",CCTV-09
 http://39.134.115.221:8080/PLTV/88888910/224/3221225646/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV10" tvg-id="CCTV10" group-title="天涯-1080",CCTV10
+#EXTINF:-1 tvg-name="CCTV10" tvg-id="CCTV10" group-title="天涯-1080",CCTV-10
 http://39.134.115.221:8080/PLTV/88888910/224/3221225627/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV10" tvg-id="CCTV10" group-title="天涯-1080",CCTV10
+#EXTINF:-1 tvg-name="CCTV10" tvg-id="CCTV10" group-title="天涯-1080",CCTV-10
 http://39.134.115.221:8080/PLTV/88888910/224/3221225636/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV11" tvg-id="CCTV11" group-title="天涯-1080",CCTV11
+#EXTINF:-1 tvg-name="CCTV11" tvg-id="CCTV11" group-title="天涯-1080",CCTV-11
 http://39.134.115.221:8080/PLTV/88888910/224/3221225628/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV12" tvg-id="CCTV12" group-title="天涯-1080",CCTV12
+#EXTINF:-1 tvg-name="CCTV12" tvg-id="CCTV12" group-title="天涯-1080",CCTV-12
 http://39.134.115.221:8080/PLTV/88888910/224/3221225629/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV13" tvg-id="CCTV13" group-title="天涯-1080",CCTV13
+#EXTINF:-1 tvg-name="CCTV13" tvg-id="CCTV13" group-title="天涯-1080",CCTV-13
 http://39.134.115.221:8080/PLTV/88888910/224/3221225638/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV14" tvg-id="CCTV14" group-title="天涯-1080",CCTV14
+#EXTINF:-1 tvg-name="CCTV14" tvg-id="CCTV14" group-title="天涯-1080",CCTV-14
 http://39.134.115.221:8080/PLTV/88888910/224/3221225639/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV14" tvg-id="CCTV14" group-title="天涯-1080",CCTV14
+#EXTINF:-1 tvg-name="CCTV14" tvg-id="CCTV14" group-title="天涯-1080",CCTV-14
 http://39.134.115.221:8080/PLTV/88888910/224/3221225640/index.m3u8
 
-#EXTINF:-1 tvg-name="CCTV15" tvg-id="CCTV15" group-title="天涯-1080",CCTV15
+#EXTINF:-1 tvg-name="CCTV15" tvg-id="CCTV15" group-title="天涯-1080",CCTV-15
 http://39.134.115.221:8080/PLTV/88888910/224/3221225641/index.m3u8
 
 #EXTINF:-1 tvg-name="东南卫视" tvg-id="东南卫视" group-title="天涯-1080",东南卫视
@@ -382,7 +382,7 @@ http://39.134.116.30:8080/PLTV/88888910/224/3221225690/index.m3u8
 #EXTINF:-1 tvg-name="BTV纪实科教-8KSDR源" tvg-id="BTV纪实科教-8KSDR源" group-title="天涯-4K",BTV纪实科教-8KSDR源
 http://111.62.156.15/downlive.brtvcloud.com/8krongmei1502/1502rongmeike8k.m3u8
 
-#EXTINF:-1 tvg-name="CCTV16-4K-25PHLG源" tvg-id="CCTV16-4K-25PHLG源" group-title="天涯-4K",CCTV16-4K-25PHLG源
+#EXTINF:-1 tvg-name="CCTV16-4K-25PHLG源" tvg-id="CCTV16-4K-25PHLG源" group-title="天涯-4K",CCTV-16-4K-25PHLG源
 http://live.cooltv.top/tv/aishang.php?id=cctv164k
 
 #EXTINF:-1 tvg-name="Clarity4K" tvg-id="Clarity4K" group-title="天涯-4K",Clarity4K
