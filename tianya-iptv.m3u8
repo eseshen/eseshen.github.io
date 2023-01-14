@@ -460,7 +460,7 @@ http://39.134.115.163:8080/PLTV/88888910/224/3221225786/index.m3u8
 #EXTINF:-1 tvg-name="苏州4K" tvg-id="苏州4K" group-title="天涯-4K",苏州4K
 http://liveshowbak2.kan0512.com/ksz-norecord/csztv4k_4k.m3u8
 
-#EXTINF:-1 tvg-name="BBC UHD" tvg-id="BBC UHD" group-title="天涯-576-4K",BBC UHD
+#EXTINF:-1 tvg-name="BBC UHD" tvg-id="BBC UHD" group-title="天涯-4K",BBC UHD
 http://sheriffwoody.in:80/Jeff1/Jeff1/3157685
 
 #EXTINF:-1 tvg-name="CGTN记录" tvg-id="CGTN记录" group-title="天涯-576",CGTN记录
