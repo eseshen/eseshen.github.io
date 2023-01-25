@@ -1,3 +1,4 @@
+#EXTM3U
 
 #EXTINF:-1 tvg-name="CCTV1" tvg-id="CCTV1" group-title="央视" tvg-logo="",CCTV1,
 HTTP://[2001:da8:c000:1201:f816:3eff:fe09:940e]/hls/cctv1hd.m3u8
