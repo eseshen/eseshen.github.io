@@ -14,6 +14,8 @@
 		var prefix = "https://www.google.com/search?q=";
 		var suffix = "";
 		var keyword = "";
+		var regex = "";
+		var replacement = "";
 		for (var i in arr) {
 			var pair = arr[i].split('=');
 			var key = pair[0];
@@ -24,9 +26,18 @@
 				suffix = val;
 			} else if (key == "word") {
 				keyword = val;
+			} else if (key == "regex") {
+				regex = val;
+			} else if (key == "replacement") {
+				replacement = val;
 			}
 		}
-		var href = prefix + keyword + suffix;
+
+		var newKeyword = keyword;
+		if (regex && replacement) {
+			newKeyword = keyword.replaceAll(regex, replacement);
+		}
+		var href = prefix + newKeyword + suffix;
 		if (href && (href.length > 0)) {
 			window.location.href = href;
 		}
