@@ -36,7 +36,7 @@
 					replacementMapping[index] = {};
 				}
 				replacementMapping[index].regex = regex;
-			} else if (key.match(/replacement\d*/) {
+			} else if (key.match(/replacement\d*/)) {
 				var index = key.replace(/replacement(\d*)/, '$1');
 				if (!index) {
 					index = '0';
