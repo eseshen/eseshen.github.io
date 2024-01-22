@@ -53,21 +53,18 @@
 		var replacementList = Object.keys(replacementMapping).sort();
 		if (replacementList.length > 0) {
 			for (var i in replacementList) {
-				var regex = replacementList[i].regex;
-				var replacement = replacementList[i].replacement;
+				var regex = replacementMapping[replacementList[i]].regex;
+				var replacement = replacementMapping[replacementList[i]].replacement;
 				if (regex && replacement) {
-					newKeyword = newKeyword.replaceAll(regex, replacement);
-					console.log(newKeyword);
+					newKeyword = newKeyword.replace(regex, replacement);
 				}
 			}
 		}
 		
 		var href = prefix + newKeyword + suffix;
 		if (href && (href.length > 0)) {
-			// window.location.href = href;
+			window.location.href = href;
 		}
-		console.log(replacementMapping);
-		console.log(href);
 	</script>
 </body>
 
