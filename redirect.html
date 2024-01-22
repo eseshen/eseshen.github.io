@@ -14,8 +14,8 @@
 		var prefix = "https://www.google.com/search?q=";
 		var suffix = "";
 		var keyword = "";
-		var regex = "";
-		var replacement = "";
+		var replacementMapping = {};
+
 		for (var i in arr) {
 			var pair = arr[i].split('=');
 			var key = pair[0];
@@ -26,17 +26,41 @@
 				suffix = val;
 			} else if (key == "word") {
 				keyword = val;
-			} else if (key == "regex") {
-				regex = new RegExp(val);
-			} else if (key == "replacement") {
-				replacement = val;
+			} else if (key.match(/regex\d*/)) {
+				var index = key.replace(/regex(\d*)/, '$1');
+				if (!index) {
+					index = '0';
+				}
+				var regex = new RegExp(val);
+				if (!replacementMapping[index]) {
+					replacementMapping[index] = {};
+				}
+				replacementMapping[index].regex = regex;
+			} else if (key.match(/replacement\d*/) {
+				var index = key.replace(/replacement(\d*)/, '$1');
+				if (!index) {
+					index = '0';
+				}
+				var replacement = val;
+				if (!replacementMapping[index]) {
+					replacementMapping[index] = {};
+				}
+				replacementMapping[index].replacement = replacement;
 			}
 		}
 
 		var newKeyword = keyword;
-		if (regex && replacement) {
-			newKeyword = keyword.replaceAll(regex, replacement);
+		var replacementList = Object.keys(replacementMapping).sort();
+		if (replacementList.length > 0) {
+			for (var i in replacementList) {
+				var regex = replacementList[i].regex;
+				var replacement = replacementList[i].replacement;
+				if (regex && replacement) {
+					newKeyword = newKeyword.replaceAll(regex, replacement);
+				}
+			}
 		}
+		
 		var href = prefix + newKeyword + suffix;
 		if (href && (href.length > 0)) {
 			window.location.href = href;
