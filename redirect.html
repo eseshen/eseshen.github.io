@@ -57,14 +57,17 @@
 				var replacement = replacementList[i].replacement;
 				if (regex && replacement) {
 					newKeyword = newKeyword.replaceAll(regex, replacement);
+					console.log(newKeyword);
 				}
 			}
 		}
 		
 		var href = prefix + newKeyword + suffix;
 		if (href && (href.length > 0)) {
-			window.location.href = href;
+			// window.location.href = href;
 		}
+		console.log(replacementMapping);
+		console.log(href);
 	</script>
 </body>
 
