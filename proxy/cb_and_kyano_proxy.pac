@@ -15,6 +15,14 @@ function FindProxyForURL(url, host) {
         return "DIRECT";
     }
 
+    // Production Sites with www
+    else if (shExpMatch(host, "auth.crystalbridge.com") ||
+        shExpMatch(host, "auth.crystalbridge.de") ||
+        shExpMatch(host, "auth.snpkynao.com") ||
+        shExpMatch(host, "auth.snpkyano.de")) {
+        return "DIRECT";
+    }
+
 
     // dev, pre-test, qas
     else if (shExpMatch(host, "*.crystalbridge.com") ||
