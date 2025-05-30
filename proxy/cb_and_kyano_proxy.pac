@@ -29,7 +29,7 @@ function FindProxyForURL(url, host) {
         shExpMatch(host, "*.crystalbridge.de") ||
         shExpMatch(host, "*.snpkynao.com") ||
         shExpMatch(host, "*.snpkyano.de")) {
-        return "SOCKS5 localhost:18080";
+        return "SOCKS5 localhost:1080";
     }
 
     // Default to direct connection
