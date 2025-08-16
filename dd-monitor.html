@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B站DD监控室</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="dd-monitor.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px 40px; /* Increased side padding to 40px for 20px blank on each side */
+            font-family: Arial, sans-serif;
+        }
+        #layout-control {
+            margin-bottom: 20px;
+        }
+        #layout-select {
+            padding: 10px;
+            font-size: 16px;
+        }
+        #grid-container {
+            display: grid;
+            gap: 20px;
+            justify-content: space-evenly; /* Evenly distribute grid cells horizontally */
+            width: 100%;
+        }
+        .grid-cell {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        .input-group {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 8px;
+            font-size: 14px;
+        }
+        .input-group button {
+            padding: 8px 12px;
+            margin-left: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .input-group button:hover {
+            background-color: #0056b3;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="layout-control">
+        <label for="layout-select">选择布局：</label>
+        <select id="layout-select">
+            <option value="1x1" selected>1x1</option>
+            <option value="1x2">1x2</option>
+            <option value="1x3">1x3</option>
+            <option value="2x2">2x2</option>
+            <option value="2x3">2x3</option>
+            <option value="3x3">3x3</option>
+        </select>
+    </div>
+    <div id="grid-container"></div>
+</body>
+</html>
