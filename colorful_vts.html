@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <title>VTS模型改色助手</title>
+        <style>
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+                max-width: 760px;
+                margin: 40px auto;
+                padding: 0 16px 40px;
+                line-height: 1.6;
+            }
+            h1 {
+                font-size: 26px;
+                margin-bottom: 12px;
+            }
+            label {
+                display: block;
+                margin-top: 16px;
+                font-weight: 600;
+            }
+            input[type='text'] {
+                width: 120px;
+                padding: 4px 6px;
+                font-size: 14px;
+                margin-right: 8px;
+            }
+            input[type='color'] {
+                width: 40px;
+                height: 28px;
+                padding: 0;
+                border: none;
+                margin-left: 8px;
+                cursor: pointer;
+            }
+            button {
+                margin-top: 20px;
+                padding: 6px 16px;
+                font-size: 14px;
+            }
+            .row {
+                display: flex;
+                align-items: center;
+                margin-top: 8px;
+                flex-wrap: wrap;
+            }
+            .swatch {
+                width: 40px;
+                height: 20px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+                margin-left: 8px;
+            }
+            .result-block {
+                margin-top: 24px;
+                padding: 12px;
+                border-radius: 8px;
+                border: 1px solid #ddd;
+                background: #fafafa;
+            }
+            .mono {
+                font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+            }
+            small {
+                color: #666;
+            }
+
+            /* 色卡 */
+            .palette {
+                margin-top: 12px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
+            .color-box {
+                width: 32px;
+                height: 32px;
+                border-radius: 4px;
+                cursor: pointer;
+                border: 1px solid #ccc;
+            }
+
+            .color-picker-label {
+                margin-left: 8px;
+                font-size: 13px;
+                color: #555;
+            }
+
+			.hiden {
+				display: none;
+			}
+
+            input[type='color'] {
+                width: 40px;
+                height: 28px;
+                padding: 0;
+                border: 2px solid #888;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+
+            input[type='color']:hover {
+                border-color: #000;
+                transform: scale(1.05);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>VTS模型改色助手</h1>
+        <p>
+            输入或选择原始颜色与目标颜色，本工具会计算： 为了在尽量使用叠底的同时，让滤色颜色亮度尽可能低的一组
+            <span class="mono">Multiply</span> 和 <span class="mono">Screen</span> 颜色。
+        </p>
+		<label>
+			原始颜色（Base）
+			<small>例如：a99595</small>
+		  </label>
+		<div class="row">
+
+			<input type="text" id="baseColor" value="a99595" maxlength="6" />
+			<input type="color" id="basePicker" title="点击这里选择颜色" />
+			<span class="color-picker-label">🎨 点击左侧色块选择颜色</span>
+			<div id="baseSwatch" class="swatch hiden"></div>
+		  </div>
+		  <label>
+			目标颜色（Target）
+			<small>例如：ffb3a7</small>
+		  </label>
+		  <div class="row">
+
+			<input type="text" id="targetColor" value="ffb3a7" maxlength="6" />
+			<input type="color" id="targetPicker" title="点击这里选择颜色" />
+			<span class="color-picker-label">🎨 点击左侧色块选择颜色</span>
+			<div id="targetSwatch" class="swatch hiden"></div>
+		  </div>
+		  
+
+        <!-- 色卡 -->
+        <label>常用色卡（点击可快速选择目标颜色）</label>
+        <div class="palette" id="palette"></div>
+
+        <button id="calcBtn">计算</button>
+
+        <div id="results" class="result-block" style="display: none">
+            <h2>计算结果</h2>
+
+            <div class="row">
+                <span>推荐叠底颜色（Multiply）：</span>
+                <span class="mono" id="multiplyHex" style="margin-left: 8px"></span>
+                <div id="multiplySwatch" class="swatch"></div>
+            </div>
+
+            <div class="row">
+                <span>推荐滤色颜色（Screen）：</span>
+                <span class="mono" id="screenHex" style="margin-left: 8px"></span>
+                <div id="screenSwatch" class="swatch"></div>
+            </div>
+
+            <hr style="margin: 16px 0" />
+
+            <div class="row">
+                <span>叠底后的中间结果：</span>
+                <span class="mono" id="afterMultiplyHex" style="margin-left: 8px"></span>
+                <div id="afterMultiplySwatch" class="swatch"></div>
+            </div>
+
+            <div class="row">
+                <span>叠底 + 滤色 后的计算结果：</span>
+                <span class="mono" id="finalColorHex" style="margin-left: 8px"></span>
+                <div id="finalColorSwatch" class="swatch"></div>
+            </div>
+
+            <p style="margin-top: 12px">
+                <small> 注意：因为存在四舍五入，最终结果可能与目标颜色的某些通道相差 1。 </small>
+            </p>
+            <p id="warning" style="color: #c00; margin-top: 4px; display: none"></p>
+        </div>
+
+        <script>
+            /* ---------- 工具函数 ---------- */
+            function clamp255(v) {
+                return Math.min(255, Math.max(0, Math.round(v)));
+            }
+            function hexToRgb(hex) {
+                hex = hex.trim().replace(/^#/, '');
+                return {
+                    r: parseInt(hex.slice(0, 2), 16),
+                    g: parseInt(hex.slice(2, 4), 16),
+                    b: parseInt(hex.slice(4, 6), 16),
+                };
+            }
+            function rgbToHex(r, g, b) {
+                const to2 = (v) => v.toString(16).padStart(2, '0').toUpperCase();
+                return to2(r) + to2(g) + to2(b);
+            }
+
+            /* ---------- 求解单通道 ---------- */
+            function solveChannel(b, t) {
+                if (b === 0) return { m: 255, s: t };
+                if (t <= b) {
+                    return { m: clamp255(255 * (t / b)), s: 0 };
+                }
+                const B = b / 255,
+                    T = t / 255;
+                const S = 1 - (1 - T) / (1 - B);
+                return { m: 255, s: clamp255(S * 255) };
+            }
+
+            /* ---------- 混合 ---------- */
+            function applyMultiplyOnly(base, mul) {
+                return {
+                    r: clamp255((base.r * mul.r) / 255),
+                    g: clamp255((base.g * mul.g) / 255),
+                    b: clamp255((base.b * mul.b) / 255),
+                };
+            }
+            function applyMultiplyScreen(base, mul, scr) {
+                function blend(b, m, s) {
+                    const B = b / 255,
+                        M = m / 255,
+                        S = s / 255;
+                    const U = B * M;
+                    return clamp255((1 - (1 - U) * (1 - S)) * 255);
+                }
+                return {
+                    r: blend(base.r, mul.r, scr.r),
+                    g: blend(base.g, mul.g, scr.g),
+                    b: blend(base.b, mul.b, scr.b),
+                };
+            }
+
+            /* ---------- 色卡 ---------- */
+            const paletteColors = [
+                // --- 粉色系 ---
+                'FFB3A7',
+                'FF9AA2',
+                'FFB7B2',
+                'FFDAC1',
+                'F7C5CC',
+                'F4A7B9',
+                'E799B0',
+                'E36AA5',
+                // --- 红色系 ---
+                'FF6F6F',
+                'FF8A80',
+                'FF5252',
+                'E53935',
+                'D32F2F',
+                'C62828',
+                // --- 橙色系 ---
+                'FFAB40',
+                'FF8F00',
+                'FF7043',
+                'F57C00',
+                'EF6C00',
+                'E65100',
+                // --- 黄色系 ---
+                'FFD740',
+                'FFF59D',
+                'FFEB3B',
+                'FBC02D',
+                'F9A825',
+                'F57F17',
+                // --- 绿色系 ---
+                'C5E1A5',
+                'A5D6A7',
+                '81C784',
+                '66BB6A',
+                '4CAF50',
+                '43A047',
+                '2E7D32',
+                // --- 青色系 ---
+                'A7FFEB',
+                '64FFDA',
+                '1DE9B6',
+                '00BFA5',
+                '26A69A',
+                '00897B',
+                // --- 蓝色系 ---
+                'A7C7E7',
+                '89CFF0',
+                '6EC6FF',
+                '5AB9EA',
+                '4D96FF',
+                '2196F3',
+                '1976D2',
+                '0D47A1',
+                // --- 紫色系 ---
+                'B39DDB',
+                '9575CD',
+                '7E57C2',
+                '673AB7',
+                '5E35B1',
+                '512DA8',
+                // --- 棕色系（发色常用） ---
+                '4E342E',
+                '5D4037',
+                '6D4C41',
+                '795548',
+                '8D6E63',
+                'A1887F',
+                'D7CCC8',
+                // --- 灰色系（衣服/阴影常用） ---
+                'FAFAFA',
+                'F5F5F5',
+                'EEEEEE',
+                'E0E0E0',
+                'BDBDBD',
+                '9E9E9E',
+                '757575',
+                '616161',
+                '424242',
+                '212121',
+                // --- 肤色（Live2D 常用） ---
+                'FFE0BD',
+                'FFCD94',
+                'EAC086',
+                'D1A374',
+                'C68642',
+                '8D5524',
+                // --- 亮色系 ---
+                'FFEE58',
+                'FFCA28',
+                'FFA726',
+                'FF7043',
+                'FF8A65',
+                'F06292',
+                // --- 暗色系 ---
+                '263238',
+                '37474F',
+                '455A64',
+                '546E7A',
+                '607D8B',
+                // --- 主题色（柔和） ---
+                'F8EDEB',
+                'FCD5CE',
+                'F8D7DA',
+                'E8E8E4',
+                'D8E2DC',
+                'ECE4DB',
+                'FFE5D9',
+                'FFD7BA',
+                'FEC89A',
+                // --- 主题色（亮色） ---
+                'FF6F91',
+                'FF9671',
+                'FFC75F',
+                'F9F871',
+                'A1E44D',
+                '4DD599',
+                '4DB6AC',
+                '4D96FF',
+            ];
+
+            function initPalette() {
+                const box = document.getElementById('palette');
+                paletteColors.forEach((hex) => {
+                    const div = document.createElement('div');
+                    div.className = 'color-box';
+                    div.style.backgroundColor = '#' + hex;
+                    div.onclick = () => {
+                        document.getElementById('targetColor').value = hex;
+                        document.getElementById('targetPicker').value = '#' + hex;
+                        updateSwatch('targetSwatch', hex);
+                    };
+                    box.appendChild(div);
+                });
+            }
+
+            /* ---------- UI 更新 ---------- */
+            function updateSwatch(id, hex) {
+                document.getElementById(id).style.backgroundColor = '#' + hex;
+            }
+
+            /* ---------- 主逻辑 ---------- */
+            function main() {
+                initPalette();
+
+                const baseInput = document.getElementById('baseColor');
+                const targetInput = document.getElementById('targetColor');
+                const basePicker = document.getElementById('basePicker');
+                const targetPicker = document.getElementById('targetPicker');
+
+                function syncPickerFromText() {
+                    try {
+                        basePicker.value = '#' + baseInput.value;
+                        targetPicker.value = '#' + targetInput.value;
+                        updateSwatch('baseSwatch', baseInput.value);
+                        updateSwatch('targetSwatch', targetInput.value);
+                    } catch {}
+                }
+                function syncTextFromPicker() {
+                    baseInput.value = basePicker.value.replace('#', '');
+                    targetInput.value = targetPicker.value.replace('#', '');
+                    syncPickerFromText();
+                }
+
+                baseInput.oninput = syncPickerFromText;
+                targetInput.oninput = syncPickerFromText;
+                basePicker.oninput = syncTextFromPicker;
+                targetPicker.oninput = syncTextFromPicker;
+
+                syncPickerFromText();
+
+                document.getElementById('calcBtn').onclick = () => {
+                    const base = hexToRgb(baseInput.value);
+                    const target = hexToRgb(targetInput.value);
+
+                    const r = solveChannel(base.r, target.r);
+                    const g = solveChannel(base.g, target.g);
+                    const b = solveChannel(base.b, target.b);
+
+                    const mul = { r: r.m, g: g.m, b: b.m };
+                    const scr = { r: r.s, g: g.s, b: b.s };
+
+                    const mulHex = rgbToHex(mul.r, mul.g, mul.b);
+                    const scrHex = rgbToHex(scr.r, scr.g, scr.b);
+
+                    document.getElementById('multiplyHex').textContent = '#' + mulHex;
+                    document.getElementById('screenHex').textContent = '#' + scrHex;
+                    updateSwatch('multiplySwatch', mulHex);
+                    updateSwatch('screenSwatch', scrHex);
+
+                    const afterMul = applyMultiplyOnly(base, mul);
+                    const afterMulHex = rgbToHex(afterMul.r, afterMul.g, afterMul.b);
+                    document.getElementById('afterMultiplyHex').textContent = '#' + afterMulHex;
+                    updateSwatch('afterMultiplySwatch', afterMulHex);
+
+                    const final = applyMultiplyScreen(base, mul, scr);
+                    const finalHex = rgbToHex(final.r, final.g, final.b);
+                    document.getElementById('finalColorHex').textContent = '#' + finalHex;
+                    updateSwatch('finalColorSwatch', finalHex);
+
+                    document.getElementById('results').style.display = 'block';
+                };
+            }
+
+            main();
+        </script>
+    </body>
+</html>
