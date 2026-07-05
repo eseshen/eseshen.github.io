@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互动随机填空</title>
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --text-color: #222222; /* 改为深色字，确保白底/透明底可见 */
+            --slot-height: 60px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: transparent; /* 保持透明 */
+            color: var(--text-color);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        /* 舞台区：彻底去掉边框、背景、阴影 */
+        .stage-container {
+            width: 100%;
+            max-width: 900px;
+            background: transparent;
+            padding: 20px 0;
+            margin-bottom: 50px;
+        }
+
+        .sentence-preview {
+            font-size: 1.8rem;
+            line-height: 2;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 10px 12px;
+        }
+
+        /* 静态文本编辑 */
+        .editable-text {
+            border-bottom: 1px dashed #ccc;
+            cursor: pointer;
+            padding: 0 4px;
+        }
+        .editable-text:focus {
+            outline: none;
+            border-bottom-color: var(--primary-color);
+        }
+
+        /* 拉霸核心：只保留一条极简下划线 */
+        .slot-machine {
+            display: inline-block;
+            height: var(--slot-height);
+            width: 200px;
+            border-bottom: 2px solid var(--text-color);
+            position: relative;
+            overflow: visible; 
+            vertical-align: middle;
+            margin: 0 4px;
+        }
+
+        .slot-machine-clip {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slot-track {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slot-item {
+            height: var(--slot-height);
+            line-height: var(--slot-height);
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #d35400; /* 高级暗橙色，白底也很清晰 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding: 0 6px;
+            position: relative;
+            cursor: help;
+        }
+
+        /* Tooltip 悬浮气泡 */
+        .slot-item::after {
+            content: attr(data-tip); 
+            position: fixed; 
+            left: 50%;
+            transform: translate(-50%, -100%);
+            margin-top: -8px; 
+            background: #222222;
+            color: #fff;
+            padding: 6px 12px;
+            font-size: 1rem;
+            border-radius: 4px;
+            white-space: normal; 
+            max-width: 260px;
+            line-height: 1.4;
+            z-index: 99999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s ease;
+        }
+
+        .slot-item:hover::after {
+            opacity: 1;
+            left: calc(var(--viewport-x, 50%) + 100px); 
+            top: calc(var(--viewport-y, 0px) - 5px);
+        }
+
+        /* 控制面板区：去掉无用背景 */
+        .control-panel {
+            width: 100%;
+            max-width: 900px;
+            background: transparent;
+        }
+
+        .panel-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 15px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        /* 数量加减器极简风 */
+        .counter-btn {
+            background: none;
+            border: 1px solid #ccc;
+            color: var(--text-color);
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .counter-value {
+            font-size: 1.1rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        /* 按钮组 */
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        /* 极简按钮：去掉浮夸渐变与阴影 */
+        .action-btn {
+            flex: 2;
+            background: #222222;
+            color: white;
+            border: none;
+            padding: 12px 0;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-align: center;
+        }
+        .action-btn.running {
+            background: #27ae60;
+        }
+
+        .sub-btn {
+            flex: 1;
+            background: none;
+            border: 1px solid #222222;
+            color: var(--text-color);
+            padding: 12px 0;
+            font-size: 1rem;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        /* 词库输入区 */
+        .pool-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 768px) {
+            .pool-list { grid-template-columns: 1fr 1fr; }
+        }
+
+        .pool-item {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .pool-item label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .pool-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #ccc;
+            color: var(--text-color);
+            padding: 6px 0;
+            font-size: 0.95rem;
+        }
+        .pool-input:focus {
+            outline: none;
+            border-bottom-color: #222222;
+        }
+
+        .tip {
+            font-size: 0.8rem;
+            color: #888;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .save-status {
+            color: #27ae60;
+            font-size: 0.85rem;
+            margin-left: auto;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>互动随机填空</h1>
+    </header>
+
+    <div class="stage-container">
+        <div class="sentence-preview" id="sentencePreview"></div>
+    </div>
+
+    <div class="control-panel">
+        <div class="panel-row">
+            <div>填空数量:</div>
+            <div style="display: flex; align-items: center;">
+                <button class="counter-btn" onclick="changeSlotCount(-1)">-</button>
+                <div class="counter-value" id="slotCountValue">2</div>
+                <button class="counter-btn" onclick="changeSlotCount(1)">+</button>
+            </div>
+            <div style="color: #888; font-size: 0.85rem; margin-left: 10px;">
+                (点击上方文本可直接修改题干)
+            </div>
+            <div class="save-status" id="saveStatus">已自动保存</div>
+        </div>
+
+        <div class="pool-list" id="poolListContainer"></div>
+
+        <div class="btn-group">
+            <button class="sub-btn" id="resetPoolBtn" onclick="clearToInitialConfig()">重置词库</button>
+            <button class="sub-btn" id="restoreScrollBtn" onclick="restoreToIdleScroll()">待机滚动</button>
+            <button class="action-btn" id="actionBtn" onclick="toggleLottery()">开始抽取</button>
+        </div>
+        
+        <div class="tip">快捷键：[空格键] 开始/停止</div>
+    </div>
+
+    <script>
+        const INITIAL_CONFIG = {
+            slotCount: 2,
+            sentenceStructure: [
+                { type: 'text', content: '使用' },
+                { type: 'slot', id: 0 },
+                { type: 'text', content: '的声线，表演一个' },
+                { type: 'slot', id: 1 },
+                { type: 'text', content: '的场景。' }
+            ],
+            wordPools: {
+                0: "正太|御姐|大叔|傲娇|病娇|机器人口音|话痨|中二病|夹子音|翻译腔",
+                1: "在便利店买单发现没带钱|深情告白却认错人|作为反派发表毁灭世界宣言|向蚊子宣战|痛失一千万中奖彩票|吃螺蛳粉被辣到"
+            }
+        };
+
+        let slotCount = 2;
+        let sentenceStructure = [];
+        let wordPools = {};
+        let activeAnims = {}; 
+        let isRunning = false;
+        const SLOT_HEIGHT = 60; 
+
+        window.onload = function() {
+            loadFromStorage();
+            renderAll();
+            window.addEventListener('keydown', function(e) {
+                if(e.code === 'Space') {
+                    if(document.activeElement.tagName === 'INPUT' || document.activeElement.getAttribute('contenteditable') === 'true') return;
+                    e.preventDefault();
+                    toggleLottery();
+                }
+            });
+        };
+
+        function loadFromStorage() {
+            const savedSlotCount = localStorage.getItem('local_slotCount');
+            const savedStructure = localStorage.getItem('local_sentenceStructure');
+            const savedPools = localStorage.getItem('local_wordPools');
+
+            if(savedSlotCount && savedStructure && savedPools) {
+                try {
+                    slotCount = parseInt(savedSlotCount);
+                    sentenceStructure = JSON.parse(savedStructure);
+                    wordPools = JSON.parse(savedPools);
+                    document.getElementById('slotCountValue').innerText = slotCount;
+                    return;
+                } catch (e) {
+                    console.error(e);
+                }
+            }
+            applyConfig(INITIAL_CONFIG);
+        }
+
+        function saveToStorage() {
+            localStorage.setItem('local_slotCount', slotCount);
+            localStorage.setItem('local_sentenceStructure', JSON.stringify(sentenceStructure));
+            localStorage.setItem('local_wordPools', JSON.stringify(wordPools));
+            
+            const status = document.getElementById('saveStatus');
+            status.style.opacity = 1;
+            clearTimeout(window.saveStatusTimeout);
+            window.saveStatusTimeout = setTimeout(() => status.style.opacity = 0, 1000);
+        }
+
+        function applyConfig(config) {
+            slotCount = config.slotCount;
+            sentenceStructure = JSON.parse(JSON.stringify(config.sentenceStructure));
+            wordPools = JSON.parse(JSON.stringify(config.wordPools));
+            document.getElementById('slotCountValue').innerText = slotCount;
+        }
+
+        function restoreToIdleScroll() {
+            if (isRunning) return;
+            for(let i = 0; i < slotCount; i++) {
+                buildTrackDOM(i); 
+                startIdleScroll(i);
+            }
+        }
+
+        function clearToInitialConfig() {
+            if (isRunning) return;
+            if (confirm('确定要恢复初始词库吗？')) {
+                applyConfig(INITIAL_CONFIG);
+                saveToStorage();
+                renderAll();
+            }
+        }
+
+        function changeSlotCount(delta) {
+            if (isRunning) return; 
+            let newCount = slotCount + delta;
+            if (newCount < 1 || newCount > 10) return;
+            slotCount = newCount;
+            document.getElementById('slotCountValue').innerText = slotCount;
+            adjustSentenceStructure();
+            saveToStorage();
+            renderAll();
+        }
+
+        function adjustSentenceStructure() {
+            let currentSlots = sentenceStructure.filter(i => i.type === 'slot');
+            if (currentSlots.length < slotCount) {
+                for(let i = currentSlots.length; i < slotCount; i++) {
+                    sentenceStructure.push({ type: 'text', content: ' 并且 ' });
+                    sentenceStructure.push({ type: 'slot', id: i });
+                    if(!wordPools[i]) wordPools[i] = "选项A|选项B|选项C"; 
+                }
+            } else if (currentSlots.length > slotCount) {
+                while(sentenceStructure.filter(i => i.type === 'slot').length > slotCount) {
+                    let popped = sentenceStructure.pop();
+                    if(popped.type === 'slot' && sentenceStructure.length > 0 && sentenceStructure[sentenceStructure.length-1].type === 'text') {
+                        sentenceStructure.pop();
+                    }
+                }
+            }
+        }
+
+        function renderAll() {
+            renderStage();
+            renderPoolInputs();
+            setTimeout(() => {
+                for(let i=0; i<slotCount; i++) {
+                    if(!isRunning) startIdleScroll(i);
+                }
+            }, 50);
+        }
+
+        function createSlotItemNode(text) {
+            let item = document.createElement('div');
+            item.className = 'slot-item';
+            item.innerText = text;
+            item.setAttribute('data-tip', text); 
+            const updatePos = () => {
+                let rect = item.getBoundingClientRect();
+                item.style.setProperty('--viewport-x', rect.left + 'px');
+                item.style.setProperty('--viewport-y', rect.top + 'px');
+            };
+            item.addEventListener('mouseenter', updatePos);
+            item.addEventListener('mousemove', updatePos);
+            return item;
+        }
+
+        function renderStage() {
+            const container = document.getElementById('sentencePreview');
+            container.innerHTML = '';
+            sentenceStructure.forEach((item) => {
+                if(item.type === 'text') {
+                    let span = document.createElement('span');
+                    span.className = 'editable-text';
+                    span.contentEditable = true;
+                    span.innerText = item.content;
+                    span.onblur = function() {
+                        item.content = this.innerText;
+                        saveToStorage();
+                    };
+                    container.appendChild(span);
+                } else {
+                    let slotId = item.id;
+                    let slotDiv = document.createElement('div');
+                    slotDiv.className = 'slot-machine';
+                    let clipDiv = document.createElement('div');
+                    clipDiv.className = 'slot-machine-clip';
+                    let track = document.createElement('div');
+                    track.className = 'slot-track';
+                    track.id = `slot-track-${slotId}`;
+                    clipDiv.appendChild(track);
+                    slotDiv.appendChild(clipDiv);
+                    container.appendChild(slotDiv);
+                    buildTrackDOM(slotId);
+                }
+            });
+        }
+
+        function buildTrackDOM(slotId, targetWord = null) {
+            const track = document.getElementById(`slot-track-${slotId}`);
+            if(!track) return;
+            let words = (wordPools[slotId] || "").split('|').map(w => w.trim()).filter(w => w !== "");
+            if(words.length === 0) words = ["未填词"];
+            track.innerHTML = '';
+            if(targetWord) {
+                track.appendChild(createSlotItemNode(targetWord));
+                track.style.top = '0px';
+                return;
+            }
+            let displayWords = [...words, ...words, ...words, ...words, ...words];
+            displayWords.forEach(w => track.appendChild(createSlotItemNode(w)));
+        }
+
+        function renderPoolInputs() {
+            const container = document.getElementById('poolListContainer');
+            container.innerHTML = '';
+            for(let i = 0; i < slotCount; i++) {
+                let div = document.createElement('div');
+                div.className = 'pool-item';
+                let label = document.createElement('label');
+                label.innerText = `填空 #${i+1} 候选词库：`;
+                let input = document.createElement('input');
+                input.type = 'text';
+                input.className = 'pool-input';
+                input.value = wordPools[i] || '';
+                input.oninput = function() {
+                    wordPools[i] = this.value;
+                    saveToStorage();
+                    if(!isRunning) {
+                        buildTrackDOM(i);
+                        startIdleScroll(i);
+                    }
+                };
+                div.appendChild(label);
+                div.appendChild(input);
+                container.appendChild(div);
+            }
+        }
+
+        function startIdleScroll(slotId) {
+            cancelAnimationFrame(activeAnims[slotId]);
+            const track = document.getElementById(`slot-track-${slotId}`);
+            if(!track) return;
+            let words = (wordPools[slotId] || "").split('|').map(w => w.trim()).filter(w => w !== "");
+            let poolHeight = (words.length || 1) * SLOT_HEIGHT;
+            let currentTop = 0;
+            function step() {
+                currentTop -= 0.5; 
+                if (Math.abs(currentTop) >= poolHeight) currentTop = 0; 
+                track.style.top = currentTop + 'px';
+                activeAnims[slotId] = requestAnimationFrame(step);
+            }
+            activeAnims[slotId] = requestAnimationFrame(step);
+        }
+
+        function toggleLottery() {
+            const btn = document.getElementById('actionBtn');
+            const restoreBtn = document.getElementById('restoreScrollBtn');
+            const resetBtn = document.getElementById('resetPoolBtn');
+            if (!isRunning) {
+                isRunning = true;
+                btn.innerText = "停止";
+                btn.classList.add('running');
+                restoreBtn.style.opacity = 0.3; restoreBtn.style.pointerEvents = 'none';
+                resetBtn.style.opacity = 0.3; resetBtn.style.pointerEvents = 'none';
+                for(let i=0; i<slotCount; i++) startFastScroll(i);
+            } else {
+                isRunning = false;
+                btn.innerText = "开始抽取";
+                btn.classList.remove('running');
+                restoreBtn.style.opacity = 1; restoreBtn.style.pointerEvents = 'auto';
+                resetBtn.style.opacity = 1; resetBtn.style.pointerEvents = 'auto';
+                for(let i=0; i<slotCount; i++) stopWithEaseOut(i);
+            }
+        }
+
+        function startFastScroll(slotId) {
+            cancelAnimationFrame(activeAnims[slotId]);
+            const track = document.getElementById(`slot-track-${slotId}`);
+            if(!track) return;
+            buildTrackDOM(slotId);
+            let words = (wordPools[slotId] || "").split('|').map(w => w.trim()).filter(w => w !== "");
+            let poolHeight = (words.length || 1) * SLOT_HEIGHT;
+            let currentTop = parseFloat(track.style.top) || 0;
+            let speed = 20; 
+            function step() {
+                currentTop -= speed;
+                if (Math.abs(currentTop) >= poolHeight * 2) currentTop = currentTop + poolHeight; 
+                track.style.top = currentTop + 'px';
+                track.style.filter = 'blur(1px)'; 
+                activeAnims[slotId] = requestAnimationFrame(step);
+            }
+            activeAnims[slotId] = requestAnimationFrame(step);
+        }
+
+        function stopWithEaseOut(slotId) {
+            cancelAnimationFrame(activeAnims[slotId]);
+            const track = document.getElementById(`slot-track-${slotId}`);
+            if(!track) return;
+            let words = (wordPools[slotId] || "").split('|').map(w => w.trim()).filter(w => w !== "");
+            if(words.length === 0) words = ["未填词"];
+            let randomIndex = Math.floor(Math.random() * words.length);
+            let finalWord = words[randomIndex];
+            let currentTop = parseFloat(track.style.top) || 0;
+            let speed = 25; 
+            let deceleration = 0.93; 
+            let targetTop = -( (words.length * 2 + randomIndex) * SLOT_HEIGHT );
+            while (currentTop > targetTop) currentTop -= (words.length * SLOT_HEIGHT);
+            function step() {
+                speed *= deceleration; 
+                currentTop -= speed;
+                if (speed < 1.5 || (currentTop <= targetTop && speed < 3)) {
+                    track.style.filter = 'none';
+                    buildTrackDOM(slotId, finalWord);
+                    return;
+                }
+                track.style.top = currentTop + 'px';
+                track.style.filter = `blur(${speed / 15}px)`;
+                activeAnims[slotId] = requestAnimationFrame(step);
+            }
+            activeAnims[slotId] = requestAnimationFrame(step);
+        }
+    </script>
+</body>
+</html>
