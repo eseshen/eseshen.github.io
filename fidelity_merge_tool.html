@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fidelity 股票数据合并工具</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            max-width: 650px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+        .container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+        h2 {
+            margin-top: 0;
+            color: #0d6efd;
+            text-align: center;
+            font-size: 22px;
+        }
+        .file-group {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        input[type="file"] {
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            background: #f8f9fa;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #0d6efd;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #0b5ed7;
+        }
+        #status {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        .success { color: #198754; }
+        .error { color: #dc3545; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Fidelity 数据合并工具</h2>
+    
+    <div class="file-group">
+        <label for="posFile">1. 持仓文件 (Watchlist_Position.csv)</label>
+        <input type="file" id="posFile" accept=".csv">
+    </div>
+
+    <div class="file-group">
+        <label for="planFile">2. 计划文件 (Watchlist_2026_Plan.csv)</label>
+        <input type="file" id="planFile" accept=".csv">
+    </div>
+
+    <div class="file-group">
+        <label for="fairFile">3. 估值文件 (Watchlist_2026_Fair.csv)</label>
+        <input type="file" id="fairFile" accept=".csv">
+    </div>
+
+    <button onclick="processFiles()">合并并导出 CSV</button>
+
+    <div id="status"></div>
+</div>
+
+<script>
+    // 支持跨多行单元格（如免责声明）的 CSV 解析器
+    function parseCSV(text) {
+        const rows = [];
+        let currentRow = [];
+        let currentCell = '';
+        let insideQuote = false;
+
+        for (let i = 0; i < text.length; i++) {
+            const char = text[i];
+            const nextChar = text[i + 1];
+
+            if (char === '"') {
+                if (insideQuote && nextChar === '"') {
+                    currentCell += '"';
+                    i++;
+                } else {
+                    insideQuote = !insideQuote;
+                }
+            } else if (char === ',' && !insideQuote) {
+                currentRow.push(currentCell.trim());
+                currentCell = '';
+            } else if ((char === '\r' || char === '\n') && !insideQuote) {
+                if (char === '\r' && nextChar === '\n') { i++; }
+                currentRow.push(currentCell.trim());
+                if (currentRow.some(cell => cell !== '')) {
+                    rows.push(currentRow);
+                }
+                currentRow = [];
+                currentCell = '';
+            } else {
+                currentCell += char;
+            }
+        }
+        if (currentCell || currentRow.length > 0) {
+            currentRow.push(currentCell.trim());
+            if (currentRow.some(cell => cell !== '')) {
+                rows.push(currentRow);
+            }
+        }
+        return rows;
+    }
+
+    // 解析 Fidelity CSV：跳过头部说明，丢弃尾部 Disclosure 免责声明
+    function parseFidelityCSV(text) {
+        if (!text) return [];
+        const rows = parseCSV(text);
+        
+        // 查找 Symbol 标题行
+        let headerIndex = -1;
+        for (let i = 0; i < rows.length; i++) {
+            if (rows[i].some(cell => cell.toLowerCase() === 'symbol')) {
+                headerIndex = i;
+                break;
+            }
+        }
+
+        if (headerIndex === -1) return [];
+
+        const headers = rows[headerIndex].map(h => h.trim());
+        const symbolIdx = headers.findIndex(h => h.toLowerCase() === 'symbol');
+
+        const result = [];
+        for (let i = headerIndex + 1; i < rows.length; i++) {
+            const row = rows[i];
+            const symbol = row[symbolIdx] ? row[symbolIdx].trim() : '';
+
+            // 遇到 Disclosure 说明或者无 Symbol 的非数据行时停止/忽略
+            if (!symbol || symbol.toLowerCase().startsWith('disclosure') || symbol.includes('The data and information')) {
+                continue;
+            }
+
+            // 进一步合法 Symbol 校验（包含字母/数字/斜杠，如 BRK/B，排除长文本）
+            if (symbol.length > 10 || symbol.includes(' ')) {
+                continue;
+            }
+
+            const item = {};
+            headers.forEach((h, idx) => {
+                item[h] = row[idx] || '';
+            });
+            result.push(item);
+        }
+        return result;
+    }
+
+    function readFileAsync(file) {
+        return new Promise((resolve, reject) => {
+            if (!file) {
+                resolve(null);
+                return;
+            }
+            const reader = new FileReader();
+            reader.onload = (e) => resolve(e.target.result);
+            reader.onerror = (e) => reject(e);
+            reader.readAsText(file, 'utf-8');
+        });
+    }
+
+    function escapeCSV(val) {
+        if (val === undefined || val === null) return '';
+        let str = String(val);
+        if (str.includes(',') || str.includes('"') || str.includes('\n')) {
+            str = str.replace(/"/g, '""');
+            return `"${str}"`;
+        }
+        return str;
+    }
+
+    async function processFiles() {
+        const statusDiv = document.getElementById('status');
+        statusDiv.className = '';
+        statusDiv.innerText = '正在合并数据...';
+
+        try {
+            const posFileInput = document.getElementById('posFile').files[0];
+            const planFileInput = document.getElementById('planFile').files[0];
+            const fairFileInput = document.getElementById('fairFile').files[0];
+
+            if (!posFileInput && !planFileInput && !fairFileInput) {
+                statusDiv.className = 'error';
+                statusDiv.innerText = '请至少选择一个 CSV 文件！';
+                return;
+            }
+
+            const [posText, planText, fairText] = await Promise.all([
+                readFileAsync(posFileInput),
+                readFileAsync(planFileInput),
+                readFileAsync(fairFileInput)
+            ]);
+
+            const posData = parseFidelityCSV(posText);
+            const planData = parseFidelityCSV(planText);
+            const fairData = parseFidelityCSV(fairText);
+
+            // 建立按 Symbol 索引的映射
+            const posMap = new Map(posData.map(item => [item.Symbol, item]));
+            const planMap = new Map(planData.map(item => [item.Symbol, item]));
+            const fairMap = new Map(fairData.map(item => [item.Symbol, item]));
+
+            // 汇总所有合规的股票代码
+            const allSymbols = Array.from(new Set([
+                ...posMap.keys(),
+                ...planMap.keys(),
+                ...fairMap.keys()
+            ])).sort();
+
+            // 生成干净的合并数据行
+            const csvRows = [['代码', '计划', '估值', '持仓数量', '平均价格']];
+
+            for (const symbol of allSymbols) {
+                const pos = posMap.get(symbol);
+                const plan = planMap.get(symbol);
+                const fair = fairMap.get(symbol);
+
+                // 计划：优先获取 Plan 中的 Notes
+                const planVal = (plan && plan.Notes) ? plan.Notes : ((pos && pos.Notes) ? pos.Notes : ((fair && fair.Notes) ? fair.Notes : ''));
+                
+                // 估值：获取 Fair 中的 Price
+                const fairVal = (fair && fair.Price) ? fair.Price : '';
+
+                // 持仓数量与平均价格：获取 Position 中的 Quantity 和 Price
+                const posQty = (pos && pos.Quantity) ? pos.Quantity : '';
+                const posPrice = (pos && pos.Price) ? pos.Price : '';
+
+                csvRows.push([
+                    symbol,
+                    planVal,
+                    fairVal,
+                    posQty,
+                    posPrice
+                ]);
+            }
+
+            // 转换为干净的 CSV 内容（附带 BOM 标记）
+            const csvContent = "\uFEFF" + csvRows.map(row => row.map(escapeCSV).join(',')).join('\n');
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `合并.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+
+            statusDiv.className = 'success';
+            statusDiv.innerText = `处理完成！成功过滤头部说明与尾部 Disclosure，合并了 ${allSymbols.length} 只股票的数据。`;
+
+        } catch (err) {
+            console.error(err);
+            statusDiv.className = 'error';
+            statusDiv.innerText = '合并失败，请检查文件格式。';
+        }
+    }
+</script>
+
+</body>
+</html>
